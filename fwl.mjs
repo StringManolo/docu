@@ -2,21 +2,22 @@
 
 /* lang -> javascript
 * name -> fwl
+* title -> FWL - Documentation
 * filetype -> ES6 module
 * description -> FWL (Function Web Language) is a javascript ES6 module code geneator. Is intended to write full featured documentation and generate html, markdown and bbcode.
 * summary -> Library to create documents in html, markdown and bbcode.
 */
 
 /* function -> fwl
-* summary -> Bind the library methods to the object.
-* param -> obj -> Object -> Object to bind the methods to.
+* summary -> Bind the library methods to the object
+* param -> obj -> Object -> Object to bind the methods to
 * return -> undefined
 */
 const fwl = obj => {
 
   /* property -> obj.documentType
-  * summary -> Specify what document to make.
-  * values -> "html","markdown","bbcode".
+  * summary -> Specify what document to make
+  * values -> "html","markdown","bbcode"
   */
   obj.documentType = "html";
 
@@ -39,8 +40,8 @@ const fwl = obj => {
 
   /* method -> obj.html
   * summary -> Only add the string to generated html
-  * param -> s -> String -> HTML code to include.
-  * return -> s -> String -> Html code.
+  * param -> s -> String -> HTML code to include
+  * return -> s -> String -> Html code
   */
   obj.html = s => {
     switch(obj.documentType) {
@@ -63,14 +64,11 @@ const fwl = obj => {
     }
   }
 
-  /**
-   * @exports fwl
-   * @name text
-   * @member {function}
-   * @summary Add text to the document
-   * @param {string} s - Text to add
-   * @returns {string} s - Code
-   */
+  /* method -> obj.text
+  * summary -> Add text to the document
+  * param -> s -> String -> Text to add.
+  * return -> s -> String -> Text code
+  */
   obj.text = s => {
     switch(obj.documentType) {
       case "html" : return `<span>${s}</span>`;
@@ -79,7 +77,11 @@ const fwl = obj => {
     }
   }
 
-  /** paragraph */
+  /* method -> obj.p
+  * summary -> Add text in a paragraph to the document
+  * param -> s -> String -> Text to insert
+  * return -> s -> String -> Paragraph code
+  */
   obj.p = s => {
     switch(obj.documentType) {
       case "html" : return `<p>${s}</p>`;
@@ -88,7 +90,11 @@ const fwl = obj => {
     }
   }
 
-  /** linebreak */
+  /* method -> obj.br
+  * summary -> Add a linebreak
+  * param -> s -> String -> Text to prepend the linebreak
+  * return -> s -> String -> Linebreak code
+  */
   obj.br = (s="") => {
     switch(obj.documentType) {
       case "html" : return `${s}<br />`;
@@ -97,7 +103,11 @@ const fwl = obj => {
     }
   }
 
-  /** h1 */
+  /* method -> obj.h1
+  * summary -> Add text as h1
+  * param -> s -> String -> Heading text
+  * return -> s -> String -> Heading code
+  */
   obj.h1 = s => {
     switch(obj.documentType) {
       case "html" : return `<h1>${s}</h1>`;
@@ -106,6 +116,11 @@ const fwl = obj => {
     }
   }
 
+  /* method -> obj.h2
+  * summary -> Add text as h2
+  * param -> s -> String -> Heading text
+  * return -> s -> String -> Heading code
+  */
   obj.h2 = s => {
     switch(obj.documentType) {
       case "html" : return `<h2>${s}</h2>`;
@@ -114,6 +129,11 @@ const fwl = obj => {
     }
   }
 
+  /* method -> obj.h3
+  * summary -> Add text as h1
+  * param -> s -> String -> Heading text
+  * return -> s -> String -> Heading code
+  */
   obj.h3 = s => {
     switch(obj.documentType) {
       case "html" : return `<h3>${s}</h3>`;
@@ -122,6 +142,11 @@ const fwl = obj => {
     }
   }
 
+  /* method -> obj.h4
+  * summary -> Add text as h1
+  * param -> s -> String -> Heading text
+  * return -> s -> String -> Heading code
+  */
   obj.h4 = s => {
     switch(obj.documentType) {
       case "html" : return `<h4>${s}</h4>`;
@@ -130,6 +155,11 @@ const fwl = obj => {
     }
   }
 
+  /* method -> obj.h5
+  * summary -> Add text as h1
+  * param -> s -> String -> Heading text
+  * return -> s -> String -> Heading code
+  */
   obj.h5 = s => {
     switch(obj.documentType) {
       case "html" : return `<h5>${s}</h5>`;
@@ -138,6 +168,11 @@ const fwl = obj => {
     }
   }
 
+  /* method -> obj.h6
+  * summary -> Add text as h1
+  * param -> s -> String -> Heading text
+  * return -> s -> String -> Heading code
+  */
   obj.h6 = s => {
     switch(obj.documentType) {
       case "html" : return `<h6>${s}</h6>`;
@@ -146,6 +181,11 @@ const fwl = obj => {
     }
   }
 
+  /* method -> obj.link
+  * summary -> Create a clickable link
+  * param -> s -> String -> Link text + space + url
+  * return -> s -> String -> Clickable link code
+  */
   obj.link = s => {
     let s1, s2;
     if (/ /g.test(s[0])) {
@@ -162,6 +202,11 @@ const fwl = obj => {
     }
   }
 
+  /* method -> obj.image
+  * summary -> Create a image
+  * param -> s -> String -> Alt text + space + url
+  * return -> s -> String -> Image code
+  */
   obj.image = s => {
     let s1, s2;
     if (/ /g.test(s[0])) {
@@ -178,6 +223,11 @@ const fwl = obj => {
     }
   }
 
+  /* method -> obj.code
+  * summary -> Create a highlighted code block
+  * param -> s -> String -> Code. First line is only the language name
+  * return -> s -> String -> Code block.
+  */
   obj.code = s => {
     let s1, s2;
     if (/(\r\n|\r|\n)/g.test(s[0])) {
@@ -200,6 +250,11 @@ const fwl = obj => {
     }
   }
 
+  /* method -> obj.bold
+  * summary -> Make text bold
+  * param -> s -> String -> Text
+  * return -> s -> String -> Bold text
+  */
   obj.bold = s => {
     switch(obj.documentType) {
       case "html" : return `<b>${s}</b>`;
@@ -208,6 +263,11 @@ const fwl = obj => {
     }
   }
 
+  /* method -> obj.italic
+  * summary -> Make text italic
+  * param -> s -> String -> Text
+  * return -> s -> String -> Italized text
+  */
   obj.italic = s => {
     switch(obj.documentType) {
       case "html" : return `<i>${s}</i>`;
@@ -216,6 +276,11 @@ const fwl = obj => {
     }
   }
 
+  /* method -> obj.underline
+  * summary -> Underline the text
+  * param -> s -> String -> Text
+  * return -> s -> String -> Underlined text (markdown returns normal text)
+  */
   obj.underline = s => {
     switch(obj.documentType) {
       case "html" : return `<u>${s}</u>`;
@@ -224,6 +289,11 @@ const fwl = obj => {
     }
   }
 
+  /* method -> obj.list
+  * summary -> Create a dotted list of items
+  * param -> s -> String -> Comma separated list of items
+  * return -> s -> String -> List code
+  */
   obj.list = s => {
     /* TODO escapedcomma not working as intended */
     let aux = replaceAll(s[0], "\\\\,", "ESCAPEDCOMMA").split(",");
@@ -260,6 +330,11 @@ const fwl = obj => {
     }
   }
 
+  /* method -> obj.olist
+  * summary -> Create a numeric list of items
+  * param -> s -> String -> Comma separated list of items
+  * return -> s -> String -> List code
+  */
   obj.olist = s => {
     let aux = replaceAll(s[0], "\\\\,", "ESCAPEDCOMMA").split(",");
     for (let i in aux) {
@@ -295,6 +370,11 @@ const fwl = obj => {
     }
   }
 
+  /* method -> obj.hr
+  * summary -> Add a horizontal line separator
+  * param -> ()
+  * return -> s -> String -> Horizontal separator code
+  */
   obj.hr = () => {
     switch(obj.documentType) {
       case "html" : return `<hr>`;
@@ -303,6 +383,11 @@ const fwl = obj => {
     }
   }
 
+  /* method -> obj.quote
+  * summary -> Create a quoted block
+  * param -> s -> String -> Text block
+  * return -> s -> String -> Quoted block
+  */
   obj.quote = s => {
     let aux = "";
     if (obj.documentType == "markdown") {
@@ -320,6 +405,11 @@ const fwl = obj => {
     }
   }
 
+  /* method -> obj.table
+  * summary -> Create a table
+  * param -> s -> String -> | separated list
+  * return -> s -> String -> Table code
+  */
   obj.table = s => {
     s = s[0].split("\n");
     let aux = [];
@@ -390,6 +480,11 @@ const fwl = obj => {
     }
   }
 
+  /* method -> obj.style_tables
+  * summary -> Add tables css if generating a html document
+  * param -> ()
+  * return -> s -> String -> CSS style code
+  */
   obj.style_tables = () => {
     switch(obj.documentType) {
       case "html" : return `<style>
@@ -418,6 +513,11 @@ table {
     }
   }
 
+  /* method -> obj.style_default
+  * summary -> Add document css if generating a html document
+  * param -> ()
+  * return -> s -> String -> CSS style code
+  */
   obj.style_default = () => {
     switch(obj.documentType) {
       case "html" : return `<style>
@@ -477,6 +577,13 @@ html {
 
 }
 
+/* function -> replaceAll
+* summary -> Replace all ocurrences of a string from the text
+* param -> str -> String -> Text to replace findings from
+* param -> pattern -> String -> Text (coverted to regular expression) to replace
+* param -> newStr -> String -> New text to replaced findings for
+* return -> s -> String -> Text with all ocurrences replaced
+*/
 const replaceAll = (str, pattern, newStr) => {
   const reg = new RegExp(pattern, "g");
   while (reg.test(str)) {
