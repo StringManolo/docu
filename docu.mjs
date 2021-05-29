@@ -80,19 +80,24 @@ const processParts = part => {
 
     case "function":
     case "property":
-    case "method": return p("") + italic (`${part[0]} `) + bold (`${part[1]}`) + br("");
+    case "method": return p("") + italic (`${part[0]}`) + " " + bold (`${part[1]}`) + br("");
 
     case "summary": return br (`${part[1]}`);
 
     case "return":
       if(part.length > 3) {
-        return  "Return: " + bold (`${part[1]}`) + " " + italic (`${part[2]}`) + br (`  ${part[3]}`);
+        return  "Return: " + bold (`${part[1]}`) + " " + italic (`${part[2]}`) + "  " + br (` ${part[3]}`);
       } else if (part.length < 4) {
-        return "Return: " + italic (`${part[2]}`) + br ("");
+        return "Return: " + italic (`${part[2]}`) + " " + br ``;
       }
     break;
 
-    case "param": return  "Argument: " + bold (`${part[1]}`) + " " +	 italic (`${part[2]}`) + br (`  ${part[3]}`);
+    case "param":
+      if (part.length > 3) {
+        return  "Argument: " + bold (`${part[1]}`) + " " + italic (`${part[2]}`)  + "   " + br (`${part[3]}`);
+      } else {
+        return  "Argument: " + bold (`${part[1]}`) + br ``;
+      }
 
     case "values": return br (`Values: ${part[1]}`);
 
