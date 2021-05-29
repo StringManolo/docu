@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FWL - Documentation</title></head>
+<body>
+<p>code: javascript</p><h1>fwl</h1><hr><h3>ES6 module</h3><hr><h5>FWL (Function Web Language) is a javascript ES6 module code geneator. Is intended to write full featured documentation and generate html, markdown and bbcode.</h5><hr>Library to create documents in html, markdown and bbcode.<br /><p></p><i>function </i><b>fwl</b><br />Bind the library methods to the object.<br />Argument: <b>obj</b> <i>Object</i>  Object to bind the methods to.<br />Return: <i>undefined</i><br /><p></p><i>property </i><b>obj.documentType</b><br />Specify what document to make.<br />Values: "html","markdown","bbcode".<br /><p></p><i>method </i><b>obj.create</b><br />Print and return the generated code for the chosen document<br />Argument: <b>(...s)</b> <i>String</i>  String/s to print<br />Return: <b>str</b> <i>String</i>  All the strings<br /><p></p><i>method </i><b>obj.html</b><br />Only add the string to generated html<br />Argument: <b>s</b> <i>String</i>  HTML code to include.<br />Return: <b>s</b> <i>String</i>  Html code.<br /><p></p><i>method </i><b>obj.title</b><br />Add title tag to generated html<br />Argument: <b>s</b> <i>String</i>  Document title<br />Return: <b>code</b> <i>String</i>  String between title tags (html)<br /><style>
+html {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  text-align: middle;
+  text-size-adjust: none; /* Fix Android Big Text */
+  text-rendering: optimizeLegibility; /* Improve text */
+  margin-bottom: 4px; /* Some Android screens cover bottom viewport */
+  touch-action: manipulation; /* Disable double tap zoom on touch devices to allow fast touch actions */
+} body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 12px;
+} code {
+  display: block;
+  color: #ccc;
+  font-family: "Courier New", monospace;
+  white-space: pre;
+  overflow: auto;
+  margin-bottom: 8px;
+  padding: 3px;
+  opacity: 0.9;
+  color: #f76;
+  font-weight: 600;
+  text-shadow: -1px 1px 0 0 hsl(20, 100%, 16%),
+    -2px 2px 0 0 hsl(20, 100%, 16%),
+    -3px 3px 0 0 hsl(20, 100%, 16%),
+    -4px 4px 0 0 hsl(20, 100%, 16%),
+    -5px 5px 0 0 hsl(20, 100%, 16%),
+    -6px 6px 0 0 hsl(20, 100%, 16%);
+} blockquote {
+  background-color: #eee;
+  color: #333;
+  border-top: 2px solid black;
+  padding: 4px;
+} table {
+  margin-left: 4px;
+  border-spacing: 0;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  border-radius: 2px;
+} table th {
+  padding: 3px 10px;
+  background-color: #ddd;                                                border-top: none;                                                      border-left: none;
+  border-right: none;                                                    border-bottom: 1px solid black;
+}
+
+</style></body>
+</html>
