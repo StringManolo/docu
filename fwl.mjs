@@ -294,7 +294,7 @@ html (endingBodyTag)
     }
     switch(obj.documentType) {
       case "html" : return `<pre><code lang="${s1}">${htmlEntities(s2)}</code></pre>`;
-      case "markdown" : return "```" + s1 + "\n" + htmlEntities(s2) + "\n```";
+      case "markdown" : return "```" + s1 + "\n" + s2 + "\n```";
       case "bbcode" : return `[code=${s1}]${s2}[/code]`;
     }
   }
