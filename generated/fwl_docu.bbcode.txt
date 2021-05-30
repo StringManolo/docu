@@ -16,27 +16,69 @@ Library to create documents in html, markdown and bbcode.
 Bind the library methods to the object
 Argument: [b]obj[/b] [i]Object[/i]   Object to bind the methods to
 Return: [i]undefined[/i] 
-
+[code=javascript]import fwl from "./fwl.mjs";
+fwl(global);
+create(
+h1 `Example`,
+p `This is a paragraph`
+hr ``
+t(`This is a template using javascript variables ${new Date()}`)
+)[/code]
 
 
 [size=11pt][b][i]property[/i] [b]obj.documentType[/b][/b][/size]
 Specify what document to make
 Values: "html","markdown","bbcode"
-
+[code=javascript]obj.documentType = "html" // create outputs html
+obj.documentType = "markdown" // create outputs markdown instead
+obj.documentType = "bbcode" // create outputs bbcode instead[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.create[/b][/b][/size]
 Print and return the generated code for the chosen document
 Argument: [b](...s)[/b] [i]String[/i]   String/s to print
 Return: [b]str[/b] [i]String[/i]   All the strings
+[code=javascript]create (
+html `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">`,
 
+title `FWL`,
+
+html `</head>
+<body>`,
+
+h1 `FWL (Function Web Language)`,
+
+h3 `FWL is a simple "language" designed to build webpages and documents in html, markdown, bbcode...`,
+
+html `</body>
+</html>`
+);[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.html[/b][/b][/size]
-Only add the string to generated html
+Only add the string to generated html if HTML document.
 Argument: [b]s[/b] [i]String[/i]   HTML code to include
 Return: [b]s[/b] [i]String[/i]   Html code
+[code=javascript]html `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+`
+const startingBodyTag = "<body>";
+const endingBodyTag = "</body>";
 
+create (
+html (startingBodyTag),
+h1 `Hello`,
+html (endingBodyTag)
+`);
+
+// This will generate only the h1 tag in markdown and bbcode
+// and will add the body tags if the document is html[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.title[/b][/b][/size]
@@ -206,4 +248,11 @@ Argument: [b]str[/b] [i]String[/i]   Text to replace findings from
 Argument: [b]pattern[/b] [i]String[/i]   Text (coverted to regular expression) to replace
 Argument: [b]newStr[/b] [i]String[/i]   New text to replaced findings for
 Return: [b]s[/b] [i]String[/i]   Text with all ocurrences replaced
+
+
+
+[size=11pt][b][i]function[/i] [b]htmlEntities[/b][/b][/size]
+Convert all characters to HTML entities to avoid text being interpretated as code
+Argument: [b]s[/b] [i]String[/i]   Code to covert to HTML entities
+Return: [b]a[/b] [i]String[/i]   HTML entities
 
