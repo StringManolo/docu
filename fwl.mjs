@@ -101,6 +101,7 @@ html (endingBodyTag)
   * summary -> Add title tag to generated html
   * param -> s -> String -> Document title
   * return -> code -> String -> String between title tags (html)
+  * example -> title `Documentation`
   */
   obj.title = s => {
     switch(obj.documentType) {
@@ -114,6 +115,7 @@ html (endingBodyTag)
   * summary -> Add text to the document
   * param -> s -> String -> Text to add.
   * return -> s -> String -> Text code
+  * example -> text `This text will be shown in generated documents`
   */
   obj.text = s => {
     switch(obj.documentType) {
@@ -127,6 +129,7 @@ html (endingBodyTag)
   * summary -> Add text in a paragraph to the document
   * param -> s -> String -> Text to insert
   * return -> s -> String -> Paragraph code
+  * example -> p `My text`
   */
   obj.p = s => {
     switch(obj.documentType) {
@@ -140,6 +143,7 @@ html (endingBodyTag)
   * summary -> Add a linebreak
   * param -> s -> String -> Text to prepend the linebreak
   * return -> s -> String -> Linebreak code
+  * example -> br `This text is line break terminated`
   */
   obj.br = (s="") => {
     switch(obj.documentType) {

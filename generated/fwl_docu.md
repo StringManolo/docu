@@ -91,28 +91,36 @@ html (endingBodyTag)
 Add title tag to generated html  
 Argument: **s** _String_   Document title  
 Return: **code** _String_   String between title tags (html)  
-  
+```javascript
+title `Documentation`
+```  
   
   
 ##### _method_ **obj.text**  
 Add text to the document  
 Argument: **s** _String_   Text to add.  
 Return: **s** _String_   Text code  
-  
+```javascript
+text `This text will be shown in generated documents`
+```  
   
   
 ##### _method_ **obj.p**  
 Add text in a paragraph to the document  
 Argument: **s** _String_   Text to insert  
 Return: **s** _String_   Paragraph code  
-  
+```javascript
+p `My text`
+```  
   
   
 ##### _method_ **obj.br**  
 Add a linebreak  
 Argument: **s** _String_   Text to prepend the linebreak  
 Return: **s** _String_   Linebreak code  
-  
+```javascript
+br `This text is line break terminated`
+```  
   
   
 ##### _method_ **obj.h1**  
