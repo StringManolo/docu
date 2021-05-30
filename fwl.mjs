@@ -12,6 +12,14 @@
 * summary -> Bind the library methods to the object
 * param -> obj -> Object -> Object to bind the methods to
 * return -> undefined
+* example -> import fwl from "./fwl.mjs";
+fwl(global);
+create(
+h1 `Example`,
+p `This is a paragraph`
+hr ``
+t(`This is a template using javascript variables ${new Date()}`)
+)
 */
 const fwl = obj => {
 
@@ -230,17 +238,20 @@ const fwl = obj => {
   */
   obj.code = s => {
     let s1, s2;
-    if (/(\r\n|\r|\n)/g.test(s[0])) {
-      let aux = s[0].split("\n");
+    if (typeof(s) != "string") {
+      s = s[0];
+    }
+    if (/(\r\n|\r|\n)/g.test(s)) {
+      let aux = s.split("\n");
       s1 = aux.splice(0, 1);
       s2 = aux.join("\n");
     } else {
-      if (/ /g.test(s[0])) {
-        let aux = s[0].split(" ");
+      if (/ /g.test(s)) {
+        let aux = s.split(" ");
         s1 = aux.splice(aux.length - 1);
         s2 = aux.join(" ");
       } else {
-        s1 = s[0];
+        s1 = s;
       }
     }
     switch(obj.documentType) {

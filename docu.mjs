@@ -27,9 +27,9 @@ if (process.argv[3]) {
 
 const filename = process.argv[2];
 
-let code;
+let file;
 try {
-  code = fs.readFileSync(filename, { encoding: "utf-8" });
+  file = fs.readFileSync(filename, { encoding: "utf-8" });
 } catch(e) {
   console.log(`Unable to load the file: ${e}`);
   process.exit(0);
@@ -39,10 +39,10 @@ let stringContext = false;
 let commentContext = false;
 let commentStartPos = false;
 let comments = [];
-for (let i in code) {
-  if (code[i - 1] != "\\" && code[i] == '"' || code[i] == "'" || code[i] == "`") {
+for (let i in file) {
+  if (file[i - 1] != "\\" && file[i] == '"' || file[i] == "'" || file[i] == "`") {
     if (commentContext == false) {
-      switch(code[i]) {
+      switch(file[i]) {
         case '"': 
           stringContext = (stringContext == '"' ? false : '"');
         break;
@@ -55,15 +55,15 @@ for (let i in code) {
           stringContext = (stringContext == "`" ? false : "`");
       }
     }
-  } else if(code[i] == "/" && code[1 + +i] == "*") {
+  } else if(file[i] == "/" && file[1 + +i] == "*") {
     if (stringContext == false) {
       commentContext = true;
       commentStartPos = i; 
     }
-  } else if(code[i] == "*" && code[1 + +i] == "/") {
+  } else if(file[i] == "*" && file[1 + +i] == "/") {
     if (stringContext == false) {
       if (commentStartPos) {
-        comments.push(code.substring(commentStartPos, +i + 2));
+        comments.push(file.substring(commentStartPos, +i + 2));
         commentStartPos = false;
         stringContext = false;
         commentContext = false;
@@ -112,6 +112,11 @@ const processParts = part => {
 
     case "values": return br (`Values: ${part[1]}`);
 
+    case "example": {
+      const formatedCode = `${lang}
+${part[1].trim()}`;
+      return code(formatedCode);
+    }
 
   }
   return "";
@@ -144,6 +149,11 @@ const parseComment = comment => {
         if (/\/\*/g.test(lines[i]) || /\*/g.test(lines[i])) {
           lines[i] = lines[i].split("*").splice(1, lines[i].length).join("*").trim();
           let parts = lines[i].split("->").map(part => part.trim());
+          if (parts[0] == "example") {
+//maybe missing some part if -> found again? 
+            parts = lines.splice(i, lines.length - (1 + +i)).join("\n").split("->");
+            parts[0] = parts[0].trim();
+          }
           markup += processParts(parts);
         } else {
           //console.log("Not finding star");
