@@ -87,7 +87,7 @@ const processParts = part => {
 
     case "name": return h1 (`${part[1]}`) + hr ``;
     case "filetype": return h3 (`${part[1]}`) + hr ``;
-    case "description": return h5 (`${part[1]}`) + hr ``;
+    case "description": return h4 (`${part[1]}`) + hr ``;
 
     case "function":
     case "property":
@@ -153,6 +153,23 @@ const parseComment = comment => {
 //maybe missing some part if -> found again? 
             parts = lines.splice(i, lines.length - (1 + +i)).join("\n").split("->");
             parts[0] = parts[0].trim();
+/*
+            let aux = parts[1].split("\n");
+            for (let i = 0; i < aux.length; ++i) {
+              if (i == 0) {
+                aux[i] = aux[i].trim();
+              }
+              let precomputedIndex = (1 + +i).toString().length;
+              let separator = "";
+              let numberOfSpaces = 3 - precomputedIndex;
+              for (let j = 0; j < numberOfSpaces; ++j) {
+                separator += " ";
+              }
+              separator += "|  ";
+              aux[i] = `${1 + +i}${separator}${aux[i]}`;
+            }
+            parts[1] = aux.join("\n");
+*/
           }
           markup += processParts(parts);
         } else {

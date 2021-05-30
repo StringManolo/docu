@@ -4,7 +4,7 @@ code: javascript
 ---  
 ### ES6 module
 ---  
-##### FWL (Function Web Language) is a javascript ES6 module code geneator. Is intended to write full featured documentation and generate html, markdown and bbcode.
+#### FWL (Function Web Language) is a javascript ES6 module code geneator. Is intended to write full featured documentation and generate html, markdown and bbcode.
 ---  
 Library to create documents in html, markdown and bbcode.  
   
@@ -136,126 +136,169 @@ h1 `Documentation`
 Add text as h2  
 Argument: **s** _String_   Heading text  
 Return: **s** _String_   Heading code  
-  
+```javascript
+h2 `Articles`
+```  
   
   
 ##### _method_ **obj.h3**  
 Add text as h1  
 Argument: **s** _String_   Heading text  
 Return: **s** _String_   Heading code  
-  
+```javascript
+h3 `Article Title`
+```  
   
   
 ##### _method_ **obj.h4**  
 Add text as h1  
 Argument: **s** _String_   Heading text  
 Return: **s** _String_   Heading code  
-  
+```javascript
+h4 `Article Content Title`
+```  
   
   
 ##### _method_ **obj.h5**  
 Add text as h1  
 Argument: **s** _String_   Heading text  
 Return: **s** _String_   Heading code  
-  
+```javascript
+h5 `Part of the article`
+```  
   
   
 ##### _method_ **obj.h6**  
 Add text as h1  
 Argument: **s** _String_   Heading text  
 Return: **s** _String_   Heading code  
-  
+```javascript
+h6 `Small title`
+```  
   
   
 ##### _method_ **obj.link**  
 Create a clickable link  
 Argument: **s** _String_   Link text + space + url  
 Return: **s** _String_   Clickable link code  
-  
+```javascript
+link `StringManolo Github Account Link https://github.com/StringManolo`
+```  
   
   
 ##### _method_ **obj.image**  
 Create a image  
 Argument: **s** _String_   Alt text + space + url  
 Return: **s** _String_   Image code  
-  
+```javascript
+image `google favicon https://google.com/favicon.ico`
+```  
   
   
 ##### _method_ **obj.code**  
 Create a highlighted code block  
 Argument: **s** _String_   Code. First line is only the language name  
 Return: **s** _String_   Code block.  
-  
+```javascript
+code `#include <iostream>
+
+int main() {
+  std::cout << "Hello World!" << std::endl;
+  return 0;
+}`
+```  
   
   
 ##### _method_ **obj.bold**  
 Make text bold  
 Argument: **s** _String_   Text  
 Return: **s** _String_   Bold text  
-  
+```javascript
+bold `important`;
+```  
   
   
 ##### _method_ **obj.italic**  
 Make text italic  
 Argument: **s** _String_   Text  
 Return: **s** _String_   Italized text  
-  
+```javascript
+italic `cool`
+```  
   
   
 ##### _method_ **obj.underline**  
 Underline the text  
 Argument: **s** _String_   Text  
 Return: **s** _String_   Underlined text (markdown returns normal text)  
-  
+```javascript
+underline `underlined text`
+```  
   
   
 ##### _method_ **obj.list**  
 Create a dotted list of items  
 Argument: **s** _String_   Comma separated list of items  
 Return: **s** _String_   List code  
-  
+```javascript
+list `car,bike,plane,truck,bus`
+```  
   
   
 ##### _method_ **obj.olist**  
 Create a numeric list of items  
 Argument: **s** _String_   Comma separated list of items  
 Return: **s** _String_   List code  
-  
+```javascript
+olist `Press the button,Wait 5 seconds,Press the button again,done`
+```  
   
   
 ##### _method_ **obj.hr**  
 Add a horizontal line separator  
 Argument: **()**  
 Return: **s** _String_   Horizontal separator code  
-  
+```javascript
+hr ``
+```  
   
   
 ##### _method_ **obj.quote**  
 Create a quoted block  
 Argument: **s** _String_   Text block  
 Return: **s** _String_   Quoted block  
-  
+```javascript
+quote `"This text is being quoted"`
+```  
   
   
 ##### _method_ **obj.table**  
 Create a table  
 Argument: **s** _String_   | separated list  
 Return: **s** _String_   Table code  
-  
+```javascript
+table `item | price
+bag | 12€
+shoes | 3€`
+```  
   
   
 ##### _method_ **obj.style_tables**  
 Add tables css if generating a html document  
 Argument: **()**  
 Return: **s** _String_   CSS style code  
-  
+```javascript
+style_tables ``
+```  
   
   
 ##### _method_ **obj.style_default**  
 Add document css if generating a html document  
 Argument: **()**  
 Return: **s** _String_   CSS style code  
-  
+```javascript
+style_default``
+```  
   
   
 ##### _function_ **replaceAll**  
@@ -264,11 +307,15 @@ Argument: **str** _String_   Text to replace findings from
 Argument: **pattern** _String_   Text (coverted to regular expression) to replace  
 Argument: **newStr** _String_   New text to replaced findings for  
 Return: **s** _String_   Text with all ocurrences replaced  
-  
+```javascript
+replaceAll("hello Manolo, hello", "hello", "bye");
+```  
   
   
 ##### _function_ **htmlEntities**  
 Convert all characters to HTML entities to avoid text being interpretated as code  
 Argument: **s** _String_   Code to covert to HTML entities  
 Return: **a** _String_   HTML entities  
-
+```javascript
+htmlEntities("My favourite tag is <iframe src='javascript:alert(1337)'></iframe>");
+```

@@ -171,6 +171,7 @@ html (endingBodyTag)
   * summary -> Add text as h2
   * param -> s -> String -> Heading text
   * return -> s -> String -> Heading code
+  * example -> h2 `Articles`
   */
   obj.h2 = s => {
     switch(obj.documentType) {
@@ -184,6 +185,7 @@ html (endingBodyTag)
   * summary -> Add text as h1
   * param -> s -> String -> Heading text
   * return -> s -> String -> Heading code
+  * example -> h3 `Article Title`
   */
   obj.h3 = s => {
     switch(obj.documentType) {
@@ -197,6 +199,7 @@ html (endingBodyTag)
   * summary -> Add text as h1
   * param -> s -> String -> Heading text
   * return -> s -> String -> Heading code
+  * example -> h4 `Article Content Title`
   */
   obj.h4 = s => {
     switch(obj.documentType) {
@@ -210,6 +213,7 @@ html (endingBodyTag)
   * summary -> Add text as h1
   * param -> s -> String -> Heading text
   * return -> s -> String -> Heading code
+  * example -> h5 `Part of the article`
   */
   obj.h5 = s => {
     switch(obj.documentType) {
@@ -223,6 +227,7 @@ html (endingBodyTag)
   * summary -> Add text as h1
   * param -> s -> String -> Heading text
   * return -> s -> String -> Heading code
+  * example -> h6 `Small title`
   */
   obj.h6 = s => {
     switch(obj.documentType) {
@@ -236,6 +241,7 @@ html (endingBodyTag)
   * summary -> Create a clickable link
   * param -> s -> String -> Link text + space + url
   * return -> s -> String -> Clickable link code
+  * example -> link `StringManolo Github Account Link https://github.com/StringManolo`
   */
   obj.link = s => {
     let s1, s2;
@@ -257,6 +263,7 @@ html (endingBodyTag)
   * summary -> Create a image
   * param -> s -> String -> Alt text + space + url
   * return -> s -> String -> Image code
+  * example -> image `google favicon https://google.com/favicon.ico`
   */
   obj.image = s => {
     let s1, s2;
@@ -278,6 +285,12 @@ html (endingBodyTag)
   * summary -> Create a highlighted code block
   * param -> s -> String -> Code. First line is only the language name
   * return -> s -> String -> Code block.
+  * example -> code `#include <iostream>
+
+int main() {
+  std::cout << "Hello World!" << std::endl;
+  return 0;
+}`
   */
   obj.code = s => {
     let s1, s2;
@@ -308,6 +321,7 @@ html (endingBodyTag)
   * summary -> Make text bold
   * param -> s -> String -> Text
   * return -> s -> String -> Bold text
+  * example -> bold `important`;
   */
   obj.bold = s => {
     switch(obj.documentType) {
@@ -321,6 +335,7 @@ html (endingBodyTag)
   * summary -> Make text italic
   * param -> s -> String -> Text
   * return -> s -> String -> Italized text
+  * example -> italic `cool`
   */
   obj.italic = s => {
     switch(obj.documentType) {
@@ -334,6 +349,7 @@ html (endingBodyTag)
   * summary -> Underline the text
   * param -> s -> String -> Text
   * return -> s -> String -> Underlined text (markdown returns normal text)
+  * example -> underline `underlined text`
   */
   obj.underline = s => {
     switch(obj.documentType) {
@@ -347,6 +363,7 @@ html (endingBodyTag)
   * summary -> Create a dotted list of items
   * param -> s -> String -> Comma separated list of items
   * return -> s -> String -> List code
+  * example -> list `car,bike,plane,truck,bus`
   */
   obj.list = s => {
     /* TODO escapedcomma not working as intended */
@@ -388,6 +405,7 @@ html (endingBodyTag)
   * summary -> Create a numeric list of items
   * param -> s -> String -> Comma separated list of items
   * return -> s -> String -> List code
+  * example -> olist `Press the button,Wait 5 seconds,Press the button again,done`
   */
   obj.olist = s => {
     let aux = replaceAll(s[0], "\\\\,", "ESCAPEDCOMMA").split(",");
@@ -428,6 +446,7 @@ html (endingBodyTag)
   * summary -> Add a horizontal line separator
   * param -> ()
   * return -> s -> String -> Horizontal separator code
+  * example -> hr ``
   */
   obj.hr = () => {
     switch(obj.documentType) {
@@ -441,6 +460,7 @@ html (endingBodyTag)
   * summary -> Create a quoted block
   * param -> s -> String -> Text block
   * return -> s -> String -> Quoted block
+  * example -> quote `"This text is being quoted"`
   */
   obj.quote = s => {
     let aux = "";
@@ -463,6 +483,9 @@ html (endingBodyTag)
   * summary -> Create a table
   * param -> s -> String -> | separated list
   * return -> s -> String -> Table code
+  * example -> table `item | price
+bag | 12€
+shoes | 3€`
   */
   obj.table = s => {
     s = s[0].split("\n");
@@ -538,6 +561,7 @@ html (endingBodyTag)
   * summary -> Add tables css if generating a html document
   * param -> ()
   * return -> s -> String -> CSS style code
+  * example -> style_tables ``
   */
   obj.style_tables = () => {
     switch(obj.documentType) {
@@ -571,6 +595,7 @@ table {
   * summary -> Add document css if generating a html document
   * param -> ()
   * return -> s -> String -> CSS style code
+  * example -> style_default``
   */
   obj.style_default = () => {
     switch(obj.documentType) {
@@ -581,14 +606,11 @@ html {
   height: 100%;
   text-align: middle;
   text-size-adjust: none; /* Fix Android Big Text */
-  text-rendering: optimizeLegibility; /* Improve text */
-  margin-bottom: 4px; /* Some Android screens cover bottom viewport */
   touch-action: manipulation; /* Disable double tap zoom on touch devices to allow fast touch actions */
 } body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 12px;
+  padding-bottom: 16px; /* Some Android screens cover bottom viewport */
+  background-color: #eee;
+  color: #555;
 } code {
   display: block;
   color: #ccc;
@@ -596,16 +618,14 @@ html {
   white-space: pre;
   overflow: auto;
   margin-bottom: 8px;
-  padding: 3px;
+  padding: 10px;
   opacity: 0.9;
-  color: #f76;
+  color: #f82;
+  background-color: #222;
   font-weight: 600;
-  text-shadow: -1px 1px 0 0 hsl(20, 100%, 16%),
-    -2px 2px 0 0 hsl(20, 100%, 16%),
-    -3px 3px 0 0 hsl(20, 100%, 16%),
-    -4px 4px 0 0 hsl(20, 100%, 16%),
-    -5px 5px 0 0 hsl(20, 100%, 16%),
-    -6px 6px 0 0 hsl(20, 100%, 16%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: 1px solid black;
 } blockquote {
   background-color: #eee;
   color: #333;
@@ -621,7 +641,11 @@ html {
   padding: 3px 10px;
   background-color: #ddd;                                                border-top: none;                                                      border-left: none;
   border-right: none;                                                    border-bottom: 1px solid black;
-}
+} p {
+  margin: 0;
+} h5 {
+  margin: 18px 0 -14px 0;
+} 
 
 </style>`;
       case "markdown" : return "REMOVETHISLINE";
@@ -637,6 +661,7 @@ html {
 * param -> pattern -> String -> Text (coverted to regular expression) to replace
 * param -> newStr -> String -> New text to replaced findings for
 * return -> s -> String -> Text with all ocurrences replaced
+* example -> replaceAll("hello Manolo, hello", "hello", "bye");
 */
 const replaceAll = (str, pattern, newStr) => {
   const reg = new RegExp(pattern, "g");
@@ -650,6 +675,7 @@ const replaceAll = (str, pattern, newStr) => {
 * summary -> Convert all characters to HTML entities to avoid text being interpretated as code
 * param -> s -> String -> Code to covert to HTML entities
 * return -> a -> String -> HTML entities
+* example -> htmlEntities("My favourite tag is <iframe src='javascript:alert(1337)'></iframe>");
 */
 const htmlEntities = s => {
   const r = "replace";

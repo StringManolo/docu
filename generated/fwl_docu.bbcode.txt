@@ -6,7 +6,8 @@ code: javascript
 [size=15pt][b]ES6 module[/b][/size]
 
 [hr]
-[size=11pt][b]FWL (Function Web Language) is a javascript ES6 module code geneator. Is intended to write full featured documentation and generate html, markdown and bbcode.[/b][/size]
+[size=13pt][b]FWL (Function Web Language) is a javascript ES6 module code geneator. Is intended to write full featured documentation and generate html, markdown and bbcode.[/b][/size]
+
 [hr]
 Library to create documents in html, markdown and bbcode.
 
@@ -22,7 +23,7 @@ create(
 h1 `Example`,
 p `This is a paragraph`
 hr ``
-t(`This is a template using javascript variables ${new Date()}`)
+text(`This is a template using javascript variables ${new Date()}`)
 )[/code]
 
 
@@ -85,161 +86,168 @@ html (endingBodyTag)
 Add title tag to generated html
 Argument: [b]s[/b] [i]String[/i]   Document title
 Return: [b]code[/b] [i]String[/i]   String between title tags (html)
-
+[code=javascript]title `Documentation`[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.text[/b][/b][/size]
 Add text to the document
 Argument: [b]s[/b] [i]String[/i]   Text to add.
 Return: [b]s[/b] [i]String[/i]   Text code
-
+[code=javascript]text `This text will be shown in generated documents`[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.p[/b][/b][/size]
 Add text in a paragraph to the document
 Argument: [b]s[/b] [i]String[/i]   Text to insert
 Return: [b]s[/b] [i]String[/i]   Paragraph code
-
+[code=javascript]p `My text`[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.br[/b][/b][/size]
 Add a linebreak
 Argument: [b]s[/b] [i]String[/i]   Text to prepend the linebreak
 Return: [b]s[/b] [i]String[/i]   Linebreak code
-
+[code=javascript]br `This text is line break terminated`[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.h1[/b][/b][/size]
 Add text as h1
 Argument: [b]s[/b] [i]String[/i]   Heading text
 Return: [b]s[/b] [i]String[/i]   Heading code
-
+[code=javascript]h1 `Documentation`[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.h2[/b][/b][/size]
 Add text as h2
 Argument: [b]s[/b] [i]String[/i]   Heading text
 Return: [b]s[/b] [i]String[/i]   Heading code
-
+[code=javascript]h2 `Articles`[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.h3[/b][/b][/size]
 Add text as h1
 Argument: [b]s[/b] [i]String[/i]   Heading text
 Return: [b]s[/b] [i]String[/i]   Heading code
-
+[code=javascript]h3 `Article Title`[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.h4[/b][/b][/size]
 Add text as h1
 Argument: [b]s[/b] [i]String[/i]   Heading text
 Return: [b]s[/b] [i]String[/i]   Heading code
-
+[code=javascript]h4 `Article Content Title`[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.h5[/b][/b][/size]
 Add text as h1
 Argument: [b]s[/b] [i]String[/i]   Heading text
 Return: [b]s[/b] [i]String[/i]   Heading code
-
+[code=javascript]h5 `Part of the article`[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.h6[/b][/b][/size]
 Add text as h1
 Argument: [b]s[/b] [i]String[/i]   Heading text
 Return: [b]s[/b] [i]String[/i]   Heading code
-
+[code=javascript]h6 `Small title`[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.link[/b][/b][/size]
 Create a clickable link
 Argument: [b]s[/b] [i]String[/i]   Link text + space + url
 Return: [b]s[/b] [i]String[/i]   Clickable link code
-
+[code=javascript]link `StringManolo Github Account Link https://github.com/StringManolo`[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.image[/b][/b][/size]
 Create a image
 Argument: [b]s[/b] [i]String[/i]   Alt text + space + url
 Return: [b]s[/b] [i]String[/i]   Image code
-
+[code=javascript]image `google favicon https://google.com/favicon.ico`[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.code[/b][/b][/size]
 Create a highlighted code block
 Argument: [b]s[/b] [i]String[/i]   Code. First line is only the language name
 Return: [b]s[/b] [i]String[/i]   Code block.
+[code=javascript]code `#include <iostream>
 
+int main() {
+  std::cout << "Hello World!" << std::endl;
+  return 0;
+}`[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.bold[/b][/b][/size]
 Make text bold
 Argument: [b]s[/b] [i]String[/i]   Text
 Return: [b]s[/b] [i]String[/i]   Bold text
-
+[code=javascript]bold `important`;[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.italic[/b][/b][/size]
 Make text italic
 Argument: [b]s[/b] [i]String[/i]   Text
 Return: [b]s[/b] [i]String[/i]   Italized text
-
+[code=javascript]italic `cool`[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.underline[/b][/b][/size]
 Underline the text
 Argument: [b]s[/b] [i]String[/i]   Text
 Return: [b]s[/b] [i]String[/i]   Underlined text (markdown returns normal text)
-
+[code=javascript]underline `underlined text`[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.list[/b][/b][/size]
 Create a dotted list of items
 Argument: [b]s[/b] [i]String[/i]   Comma separated list of items
 Return: [b]s[/b] [i]String[/i]   List code
-
+[code=javascript]list `car,bike,plane,truck,bus`[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.olist[/b][/b][/size]
 Create a numeric list of items
 Argument: [b]s[/b] [i]String[/i]   Comma separated list of items
 Return: [b]s[/b] [i]String[/i]   List code
-
+[code=javascript]olist `Press the button,Wait 5 seconds,Press the button again,done`[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.hr[/b][/b][/size]
 Add a horizontal line separator
 Argument: [b]()[/b]
 Return: [b]s[/b] [i]String[/i]   Horizontal separator code
-
+[code=javascript]hr ``[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.quote[/b][/b][/size]
 Create a quoted block
 Argument: [b]s[/b] [i]String[/i]   Text block
 Return: [b]s[/b] [i]String[/i]   Quoted block
-
+[code=javascript]quote `"This text is being quoted"`[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.table[/b][/b][/size]
 Create a table
 Argument: [b]s[/b] [i]String[/i]   | separated list
 Return: [b]s[/b] [i]String[/i]   Table code
-
+[code=javascript]table `item | price
+bag | 12€
+shoes | 3€`[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.style_tables[/b][/b][/size]
 Add tables css if generating a html document
 Argument: [b]()[/b]
 Return: [b]s[/b] [i]String[/i]   CSS style code
-
+[code=javascript]style_tables ``[/code]
 
 
 [size=11pt][b][i]method[/i] [b]obj.style_default[/b][/b][/size]
 Add document css if generating a html document
 Argument: [b]()[/b]
 Return: [b]s[/b] [i]String[/i]   CSS style code
-
+[code=javascript]style_default``[/code]
 
 
 [size=11pt][b][i]function[/i] [b]replaceAll[/b][/b][/size]
@@ -248,11 +256,11 @@ Argument: [b]str[/b] [i]String[/i]   Text to replace findings from
 Argument: [b]pattern[/b] [i]String[/i]   Text (coverted to regular expression) to replace
 Argument: [b]newStr[/b] [i]String[/i]   New text to replaced findings for
 Return: [b]s[/b] [i]String[/i]   Text with all ocurrences replaced
-
+[code=javascript]replaceAll("hello Manolo, hello", "hello", "bye");[/code]
 
 
 [size=11pt][b][i]function[/i] [b]htmlEntities[/b][/b][/size]
 Convert all characters to HTML entities to avoid text being interpretated as code
 Argument: [b]s[/b] [i]String[/i]   Code to covert to HTML entities
 Return: [b]a[/b] [i]String[/i]   HTML entities
-
+[code=javascript]htmlEntities("My favourite tag is <iframe src='javascript:alert(1337)'></iframe>");[/code]
