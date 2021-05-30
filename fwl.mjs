@@ -157,6 +157,7 @@ html (endingBodyTag)
   * summary -> Add text as h1
   * param -> s -> String -> Heading text
   * return -> s -> String -> Heading code
+  * example -> h1 `Documentation`
   */
   obj.h1 = s => {
     switch(obj.documentType) {

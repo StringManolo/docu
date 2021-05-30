@@ -127,7 +127,9 @@ br `This text is line break terminated`
 Add text as h1  
 Argument: **s** _String_   Heading text  
 Return: **s** _String_   Heading code  
-  
+```javascript
+h1 `Documentation`
+```  
   
   
 ##### _method_ **obj.h2**  
