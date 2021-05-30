@@ -26,6 +26,9 @@ const fwl = obj => {
   /* property -> obj.documentType
   * summary -> Specify what document to make
   * values -> "html","markdown","bbcode"
+  * example -> obj.documentType = "html" // create outputs html
+obj.documentType = "markdown" // create outputs markdown instead
+obj.documentType = "bbcode" // create outputs bbcode instead
   */
   obj.documentType = "html";
 
@@ -33,6 +36,24 @@ const fwl = obj => {
   * summary -> Print and return the generated code for the chosen document
   * param -> (...s) -> String -> String/s to print
   * return -> str -> String -> All the strings
+  * example -> create (
+html `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">`,
+
+title `FWL`,
+
+html `</head>
+<body>`,
+
+h1 `FWL (Function Web Language)`,
+
+h3 `FWL is a simple "language" designed to build webpages and documents in html, markdown, bbcode...`,
+
+html `</body>
+</html>`
+);
   */
   obj.create = (...s) => {
     let str = "";
@@ -47,9 +68,26 @@ const fwl = obj => {
 
 
   /* method -> obj.html
-  * summary -> Only add the string to generated html
+  * summary -> Only add the string to generated html if HTML document.
   * param -> s -> String -> HTML code to include
   * return -> s -> String -> Html code
+  * example -> html `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+`
+const startingBodyTag = "<body>";
+const endingBodyTag = "</body>";
+
+create (
+html (startingBodyTag),
+h1 `Hello`,
+html (endingBodyTag)
+`);
+
+// This will generate only the h1 tag in markdown and bbcode
+// and will add the body tags if the document is html
   */
   obj.html = s => {
     switch(obj.documentType) {
@@ -255,7 +293,7 @@ const fwl = obj => {
       }
     }
     switch(obj.documentType) {
-      case "html" : return `<pre><code lang="${s1}">${s2}</code></pre>`;
+      case "html" : return `<pre><code lang="${s1}">${htmlEntities(s2)}</code></pre>`;
       case "markdown" : return "```" + s1 + "\n" + s2 + "\n```";
       case "bbcode" : return `[code=${s1}]${s2}[/code]`;
     }
@@ -601,6 +639,17 @@ const replaceAll = (str, pattern, newStr) => {
     str = str.replace(reg, newStr);
   }
   return str;
+}
+
+/* function -> htmlEntities
+* summary -> Convert all characters to HTML entities to avoid text being interpretated as code
+* param -> s -> String -> Code to covert to HTML entities
+* return -> a -> String -> HTML entities
+*/
+const htmlEntities = s => {
+  const r = "replace";
+  const a = s[r](/ /g,"&#32;")[r](/!/g,"&#33;")[r](/"/g,"&#34;")[r](/%/g,"&#37;")[r](/'/g,"&#39;")[r](/\(/g,"&#40;")[r](/\)/g,"&#41;")[r](/</g,"&#60;")[r](/>/g,"&#62;")[r](/`/g,"&#96;")[r](/a/g,"&#97;")[r](/A/g,"&#65;")[r](/e/g,"&#101;")[r](/E/g,"&#69;")[r](/i/g,"&#105;")[r](/I/g,"&#73;")[r](/o/g,"&#111;")[r](/O/g,"&#79;")[r](/u/g,"&#117;")[r](/U/g,"&#85;")[r](/{/g,"&#123;")[r](/}/g,"&#125;")[r](/‘/g,"&#8216;")[r](/’/g,"&#8217")[r](/‚/g,"&#8218;")[r](/“/g,"&#8220;")[r](/”/g,"&#8221;")[r](/„/g,"&#8222;")[r](/′/g,"&#8242;")[r](/″/g,"&#8244;")[r](/‹/g,"&#8249;")[r](/›/g,"&#8250;")[r](/s/g,"&#115;")[r](/S/g,"&#83;")[r](/\./g,"&#46;");
+  return a;
 }
 
 export default fwl;
