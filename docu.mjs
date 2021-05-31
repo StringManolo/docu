@@ -91,9 +91,12 @@ const processParts = part => {
     case "filetype": return h3 (`${part[1]}`) + hr ``;
     case "description": return h4 (`${part[1]}`) + hr ``;
 
+    case "variable":
     case "function":
     case "property":
     case "method": return p("") + br("") + h5(italic (`${part[0]}`) + " " + bold (`${part[1]}`)) + br ``;
+
+    case "type": return br (`${italic(part[1])}`);
 
     case "summary": return br (`${part[1]}`);
 
