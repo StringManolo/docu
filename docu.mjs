@@ -16,7 +16,9 @@ fwl(global);
 
 if (!process.argv[2]) {
   console.log(`Usage: 
-
+node docu.mjs myCodeFile html > documentation.html
+node docu.mjs myCodeFile markdown > documentation.md
+node docu.mjs myCodeFile bbcode > documentation.txt
 `);
   process.exit(0);
 }
