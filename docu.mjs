@@ -119,9 +119,9 @@ const processParts = (part, lineNumber) => {
     case "method": {
       let lineNumberLink;
       if (documentType == "html") {
-        lineNumberLink = link(`${lineNumber} #line${lineNumber}`);
+        lineNumberLink = link(`${lineNumber} #L${lineNumber}`);
       } else {
-        lineNumberLink = link(`${lineNumber} ${sourceLink}#${lineNumber}`);
+        lineNumberLink = link(`${lineNumber} ${sourceLink}#L${lineNumber}`);
       }
 
       return p("") + br("") + h5(italic (`${part[0]}`) + " " + bold (`${part[1]}`) + "  " + lineNumberLink) + br ``;
@@ -244,7 +244,7 @@ if (documentType == "html") {
   endFile = file.split("\n");
   auxFile = "html\n";
   for (let i in endFile) {
-    auxFile += `<span id="line${+i + 1}">${htmlEntities(endFile[i])}</span>\n`;
+    auxFile += `<span id="L${+i + 1}">${htmlEntities(endFile[i])}</span>\n`;
   }
 }
 
