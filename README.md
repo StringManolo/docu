@@ -9,9 +9,9 @@ code: javascript
 CLI tool to create documents from commentaries in html, markdown and bbcode.
 
 Download:
-> git clone https://github.com/StringManolo/docu && cd docu
+> ```git clone https://github.com/StringManolo/docu && cd docu```
 
 Usage:
-> node docu.mjs myCodeFile html > documentation.html
-> node docu.mjs myCodeFile markdown > documentation.md
-> node docu.mjs myCodeFile bbcode > documentation.txt
+> ```node docu.mjs myCodeFile html > documentation.html```
+> ```node docu.mjs myCodeFile markdown > documentation.md```
+> ```node docu.mjs myCodeFile bbcode > documentation.txt```
