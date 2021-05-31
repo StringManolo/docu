@@ -117,7 +117,16 @@ const processParts = (part, lineNumber) => {
     case "object":
     case "function":
     case "property":
-    case "method": return p("") + br("") + h5(italic (`${part[0]}`) + " " + bold (`${part[1]}`) + "  " + documentType == "html" ? link(`${lineNumber} #line${lineNumber}`) : link(`${lineNumber} ${htmlDocLink}#${lineNumber}`)) + br ``;
+    case "method": {
+      let lineNumberLink;
+      if (documentType == "html") {
+        lineNumberLink = link(`${lineNumber} #line${lineNumber}`);
+      } else {
+        lineNumberLink = link(`${lineNumber} ${htmlDocLink}#${lineNumber}`);
+      }
+
+      return p("") + br("") + h5(italic (`${part[0]}`) + " " + bold (`${part[1]}`) + "  " + lineNumberLink) + br ``;
+    }
 
     case "type": return br (`${italic(part[1])}`);
 
