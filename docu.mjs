@@ -223,13 +223,23 @@ const htmlEntities = s => {
   return a;
 }
 
-let endFile = file.split("\n");
-let auxFile = "html\n";
-for (let i in endFile) {
-  auxFile += `<span id="line${+i + 1}">${htmlEntities(endFile[i])}</span>\n`;
+
+let endFile, auxFile;
+if (documentType == "html") {
+  endFile = file.split("\n");
+  auxFile = "html\n";
+  for (let i in endFile) {
+    auxFile += `<span id="line${+i + 1}">${htmlEntities(endFile[i])}</span>\n`;
+  }
 }
 
-let generated = (premarkup + t + premarkup2 + markup + style_default() + p`` + text `Source:` + rawCode(auxFile) + postmarkup);
+let generated;
+if (documentType == "html") {
+  generated = (premarkup + t + premarkup2 + markup + style_default() + p`` + text `Source:` + rawCode(auxFile) + postmarkup);
+} else {
+  generated = (premarkup + t + premarkup2 + markup + style_default() +
+p`` + postmarkup);
+}
 
 generated = replaceAll(generated, /REMOVETHISLINE/g, "");
 
