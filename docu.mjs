@@ -41,8 +41,13 @@ try {
 let stringContext = false;
 let commentContext = false;
 let commentStartPos = false;
+let lineCounter = 1;
 let comments = [];
+let commentLines = [];
 for (let i in file) {
+  if (file[i] == "\n") {
+    ++lineCounter;
+  }
   if (file[i - 1] != "\\" && file[i] == '"' || file[i] == "'" || file[i] == "`") {
     if (commentContext == false) {
       switch(file[i]) {
@@ -66,6 +71,7 @@ for (let i in file) {
   } else if(file[i] == "*" && file[1 + +i] == "/") {
     if (stringContext == false) {
       if (commentStartPos) {
+        commentLines.push(lineCounter);
         comments.push(file.substring(commentStartPos, +i + 2));
         commentStartPos = false;
         stringContext = false;
@@ -77,7 +83,7 @@ for (let i in file) {
 
 
 let lang = "unknown";
-const processParts = part => {
+const processParts = (part, lineNumber) => {
   let aux = "";
   switch(part[0]) {
     case "lang":
@@ -104,7 +110,7 @@ const processParts = part => {
     case "object":
     case "function":
     case "property":
-    case "method": return p("") + br("") + h5(italic (`${part[0]}`) + " " + bold (`${part[1]}`)) + br ``;
+    case "method": return p("") + br("") + h5(italic (`${part[0]}`) + " " + bold (`${part[1]}`) + "  " +link(`${lineNumber} #${lineNumber}`)) + br ``;
 
     case "type": return br (`${italic(part[1])}`);
 
@@ -156,7 +162,7 @@ postmarkup = html `</body>
 </html>`;
 }
 
-const parseComment = comment => {
+const parseComment = (comment, lineNumber) => {
   if (/(\n|\r\n)/g.test(comment)) {
     let lines = comment.split("\n");
     for (let i in lines) {
@@ -186,7 +192,7 @@ const parseComment = comment => {
             parts[1] = aux.join("\n");
 */
           }
-          markup += processParts(parts);
+          markup += processParts(parts, lineNumber);
         } else {
           //console.log("Not finding star");
         }
@@ -201,7 +207,7 @@ const parseComment = comment => {
 
 
 for (let i in comments) {
-  parseComment(comments[i]);
+  parseComment(comments[i], +commentLines[i] + 1);
 }
 
 const replaceAll = (str, pattern, newStr) => {
@@ -216,3 +222,5 @@ let generated = (premarkup + t + premarkup2 + markup + style_default() + postmar
 generated = replaceAll(generated, /REMOVETHISLINE/g, "");
 
 console.log(generated);
+
+//console.log(commentLines);
