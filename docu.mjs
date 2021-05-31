@@ -8,7 +8,6 @@
 * description -> Docu is a code geneator CLI tool. Is intended to generate documentation in html, markdown and bbcode from code commentaries.
 * summary -> CLI tool to create documents from commentaries in html, markdown and bbcode.
 * dependency -> node https://node.org,fwl.mjs https://github.com/StringManolo/fwl
-* htmlDocumentationLink -> https://github.com/StringManolo/docu/blob/master/generated/fwl_docu.html
 */
 
 import fs from "fs";
