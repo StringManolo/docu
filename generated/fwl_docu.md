@@ -315,7 +315,7 @@ style_default``
 ```  
   
   
-##### _function_ **replaceAll**  [713](https://github.com/StringManolo/docu/blob/master/fwl.mjs#L713)  
+##### _function_ **replaceAll**  [716](https://github.com/StringManolo/docu/blob/master/fwl.mjs#L716)  
 Replace all ocurrences of a string from the text  
 Argument: **str** _String_   Text to replace findings from  
 Argument: **pattern** _String_   Text (coverted to regular expression) to replace  
@@ -326,7 +326,7 @@ replaceAll("hello Manolo, hello", "hello", "bye");
 ```  
   
   
-##### _function_ **htmlEntities**  [727](https://github.com/StringManolo/docu/blob/master/fwl.mjs#L727)  
+##### _function_ **htmlEntities**  [730](https://github.com/StringManolo/docu/blob/master/fwl.mjs#L730)  
 Convert all characters to HTML entities to avoid text being interpretated as code  
 Argument: **s** _String_   Code to covert to HTML entities  
 Return: **a** _String_   HTML entities  

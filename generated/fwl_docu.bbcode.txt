@@ -262,7 +262,7 @@ Return: [b]s[/b] [i]String[/i]   CSS style code
 [code=javascript]style_default``[/code]
 
 
-[size=11pt][b][i]function[/i] [b]replaceAll[/b]  [url=https://github.com/StringManolo/docu/blob/master/fwl.mjs#L713]713[/url][/b][/size]
+[size=11pt][b][i]function[/i] [b]replaceAll[/b]  [url=https://github.com/StringManolo/docu/blob/master/fwl.mjs#L716]716[/url][/b][/size]
 Replace all ocurrences of a string from the text
 Argument: [b]str[/b] [i]String[/i]   Text to replace findings from
 Argument: [b]pattern[/b] [i]String[/i]   Text (coverted to regular expression) to replace
@@ -271,7 +271,7 @@ Return: [b]s[/b] [i]String[/i]   Text with all ocurrences replaced
 [code=javascript]replaceAll("hello Manolo, hello", "hello", "bye");[/code]
 
 
-[size=11pt][b][i]function[/i] [b]htmlEntities[/b]  [url=https://github.com/StringManolo/docu/blob/master/fwl.mjs#L727]727[/url][/b][/size]
+[size=11pt][b][i]function[/i] [b]htmlEntities[/b]  [url=https://github.com/StringManolo/docu/blob/master/fwl.mjs#L730]730[/url][/b][/size]
 Convert all characters to HTML entities to avoid text being interpretated as code
 Argument: [b]s[/b] [i]String[/i]   Code to covert to HTML entities
 Return: [b]a[/b] [i]String[/i]   HTML entities

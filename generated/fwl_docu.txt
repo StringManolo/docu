@@ -1,10 +1,298 @@
-/* This commentaries are made by hand to be processed by https://github.com/StringManolo/docu */
+   code: javascript
+
+                                      fwl
+     __________________________________________________________________
+
+  ES6 module
+     __________________________________________________________________
+
+    FWL (Function Web Language) is a javascript ES6 module code geneator. Is
+    intended to write full featured documentation and generate html, markdown
+    and bbcode.
+     __________________________________________________________________
+
+   Library to create documents in html, markdown and bbcode.
+
+      function fwl [1]25
+
+   Bind the library methods to the object
+   Argument: obj Object Object to bind the methods to
+   Return: undefined
+import fwl from "./fwl.mjs";
+fwl(global);
+create(
+h1 `Example`,
+p `This is a paragraph`
+hr ``
+text(`This is a template using javascript variables ${new Date()}`)
+)
+
+      property obj.documentType [2]34
+
+   Specify what document to make
+   Values: "html","markdown","bbcode"
+obj.documentType = "html" // create outputs html
+obj.documentType = "markdown" // create outputs markdown instead
+obj.documentType = "bbcode" // create outputs bbcode instead
+
+      method obj.create [3]59
+
+   Print and return the generated code for the chosen document
+   Argument: (...s) String String/s to print
+   Return: str String All the strings
+create (
+html `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">`,
+
+title `FWL`,
+
+html `</head>
+<body>`,
+
+h1 `FWL (Function Web Language)`,
+
+h3 `FWL is a simple "language" designed to build webpages and documents in html,
+ markdown, bbcode...`,
+
+html `</body>
+</html>`
+);
+
+      method obj.html [4]93
+
+   Only add the string to generated html if HTML document.
+   Argument: s String HTML code to include
+   Return: s String Html code
+html `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+`
+const startingBodyTag = "<body>";
+const endingBodyTag = "</body>";
+
+create (
+html (startingBodyTag),
+h1 `Hello`,
+html (endingBodyTag)
+`);
+
+// This will generate only the h1 tag in markdown and bbcode
+// and will add the body tags if the document is html
+
+      method obj.title [5]107
+
+   Add title tag to generated html
+   Argument: s String Document title
+   Return: code String String between title tags (html)
+title `Documentation`
+
+      method obj.text [6]121
+
+   Add text to the document
+   Argument: s String Text to add.
+   Return: s String Text code
+text `This text will be shown in generated documents`
+
+      method obj.p [7]135
+
+   Add text in a paragraph to the document
+   Argument: s String Text to insert
+   Return: s String Paragraph code
+p `My text`
+
+      method obj.br [8]149
+
+   Add a linebreak
+   Argument: s String Text to prepend the linebreak
+   Return: s String Linebreak code
+br `This text is line break terminated`
+
+      method obj.h1 [9]163
+
+   Add text as h1
+   Argument: s String Heading text
+   Return: s String Heading code
+h1 `Documentation`
+
+      method obj.h2 [10]177
+
+   Add text as h2
+   Argument: s String Heading text
+   Return: s String Heading code
+h2 `Articles`
+
+      method obj.h3 [11]191
+
+   Add text as h1
+   Argument: s String Heading text
+   Return: s String Heading code
+h3 `Article Title`
+
+      method obj.h4 [12]205
+
+   Add text as h1
+   Argument: s String Heading text
+   Return: s String Heading code
+h4 `Article Content Title`
+
+      method obj.h5 [13]219
+
+   Add text as h1
+   Argument: s String Heading text
+   Return: s String Heading code
+h5 `Part of the article`
+
+      method obj.h6 [14]233
+
+   Add text as h1
+   Argument: s String Heading text
+   Return: s String Heading code
+h6 `Small title`
+
+      method obj.link [15]247
+
+   Create a clickable link
+   Argument: s String Link text + space + url
+   Return: s String Clickable link code
+link `StringManolo Github Account Link https://github.com/StringManolo`
+
+      method obj.image [16]272
+
+   Create a image
+   Argument: s String Alt text + space + url
+   Return: s String Image code
+image `google favicon https://google.com/favicon.ico`
+
+      method obj.code [17]299
+
+   Create a highlighted code block
+   Argument: s String Code. First line is only the language name
+   Return: s String Code block.
+code `#include <iostream>
+
+int main() {
+  std::cout << "Hello World!" << std::endl;
+  return 0;
+}`
+
+      method obj.code [18]335
+
+   Create a highlighted code block
+   Argument: s String Code. First line is only the language name
+   Return: s String Code block.
+code `#include <iostream>
+
+int main() {
+  std::cout << "Hello World!" << std::endl;
+  return 0;
+}`
+
+      method obj.bold [19]366
+
+   Make text bold
+   Argument: s String Text
+   Return: s String Bold text
+bold `important`;
+
+      method obj.italic [20]380
+
+   Make text italic
+   Argument: s String Text
+   Return: s String Italized text
+italic `cool`
+
+      method obj.underline [21]394
+
+   Underline the text
+   Argument: s String Text
+   Return: s String Underlined text (markdown returns normal text)
+underline `underlined text`
+
+      method obj.list [22]408
+
+   Create a dotted list of items
+   Argument: s String Comma separated list of items
+   Return: s String List code
+list `car,bike,plane,truck,bus`
+
+      method obj.olist [23]453
+
+   Create a numeric list of items
+   Argument: s String Comma separated list of items
+   Return: s String List code
+olist `Press the button,Wait 5 seconds,Press the button again,done`
+
+      method obj.hr [24]498
+
+   Add a horizontal line separator
+   Argument: ()
+   Return: s String Horizontal separator code
+hr ``
+
+      method obj.quote [25]512
+
+   Create a quoted block
+   Argument: s String Text block
+   Return: s String Quoted block
+quote `"This text is being quoted"`
+
+      method obj.table [26]537
+
+   Create a table
+   Argument: s String | separated list
+   Return: s String Table code
+table `item | price
+bag | 12€
+shoes | 3€`
+
+      method obj.style_tables [27]613
+
+   Add tables css if generating a html document
+   Argument: ()
+   Return: s String CSS style code
+style_tables ``
+
+      method obj.style_default [28]647
+
+   Add document css if generating a html document
+   Argument: ()
+   Return: s String CSS style code
+style_default``
+
+      function replaceAll [29]716
+
+   Replace all ocurrences of a string from the text
+   Argument: str String Text to replace findings from
+   Argument: pattern String Text (coverted to regular expression) to
+   replace
+   Argument: newStr String New text to replaced findings for
+   Return: s String Text with all ocurrences replaced
+replaceAll("hello Manolo, hello", "hello", "bye");
+
+      function htmlEntities [30]730
+
+   Convert all characters to HTML entities to avoid text being
+   interpretated as code
+   Argument: s String Code to covert to HTML entities
+   Return: a String HTML entities
+htmlEntities("My favourite tag is <iframe src='javascript:alert(1337)'></iframe>
+");
+
+   Source:
+/* This commentaries are made by hand to be processed by https://github.com/Stri
+ngManolo/docu */
 
 /* lang -> javascript
 * name -> fwl
 * title -> FWL - Documentation
 * filetype -> ES6 module
-* description -> FWL (Function Web Language) is a javascript ES6 module code geneator. Is intended to write full featured documentation and generate html, markdown and bbcode.
+* description -> FWL (Function Web Language) is a javascript ES6 module code gen
+eator. Is intended to write full featured documentation and generate html, markd
+own and bbcode.
 * summary -> Library to create documents in html, markdown and bbcode.
 * sourceLink -> https://github.com/StringManolo/docu/blob/master/fwl.mjs
 */
@@ -50,7 +338,8 @@ html `</head>
 
 h1 `FWL (Function Web Language)`,
 
-h3 `FWL is a simple "language" designed to build webpages and documents in html, markdown, bbcode...`,
+h3 `FWL is a simple "language" designed to build webpages and documents in html,
+ markdown, bbcode...`,
 
 html `</body>
 </html>`
@@ -164,7 +453,8 @@ html (endingBodyTag)
     switch(obj.documentType) {
       case "html" : return `<h1>${s}</h1>`;
       case "markdown" : return `# ${s}`;
-      case "bbcode" : return `[size=18pt][b]${s}[/b][/size]\n`; //`[h1]${s}[/h1]`;
+      case "bbcode" : return `[size=18pt][b]${s}[/b][/size]\n`; //`[h1]${s}[/h1]
+`;
     }
   }
 
@@ -178,7 +468,8 @@ html (endingBodyTag)
     switch(obj.documentType) {
       case "html" : return `<h2>${s}</h2>`;
       case "markdown" : return `## ${s}`;
-      case "bbcode" : return `[size=16pt][b]${s}[/b][/size]\n`; //`[h2]${s}[/h2]`;
+      case "bbcode" : return `[size=16pt][b]${s}[/b][/size]\n`; //`[h2]${s}[/h2]
+`;
     }
   }
 
@@ -192,7 +483,8 @@ html (endingBodyTag)
     switch(obj.documentType) {
       case "html" : return `<h3>${s}</h3>`;
       case "markdown" : return `### ${s}`;
-      case "bbcode" : return `[size=15pt][b]${s}[/b][/size]\n`; //`[h3]${s}[/h3]`;
+      case "bbcode" : return `[size=15pt][b]${s}[/b][/size]\n`; //`[h3]${s}[/h3]
+`;
     }
   }
 
@@ -206,7 +498,8 @@ html (endingBodyTag)
     switch(obj.documentType) {
       case "html" : return `<h4>${s}</h4>`;
       case "markdown" : return `#### ${s}`;
-      case "bbcode" : return `[size=13pt][b]${s}[/b][/size]\n`; //`[h4]${s}[/h4]`;
+      case "bbcode" : return `[size=13pt][b]${s}[/b][/size]\n`; //`[h4]${s}[/h4]
+`;
     }
   }
 
@@ -242,7 +535,8 @@ html (endingBodyTag)
   * summary -> Create a clickable link
   * param -> s -> String -> Link text + space + url
   * return -> s -> String -> Clickable link code
-  * example -> link `StringManolo Github Account Link https://github.com/StringManolo`
+  * example -> link `StringManolo Github Account Link https://github.com/StringM
+anolo`
   */
   obj.link = s => {
     let s1, s2;
@@ -315,7 +609,8 @@ int main() {
       }
     }
     switch(obj.documentType) {
-      case "html" : return `<pre><code lang="${s1}">${htmlEntities(s2)}</code></pre>`;
+      case "html" : return `<pre><code lang="${s1}">${htmlEntities(s2)}</code></
+pre>`;
       case "markdown" : return "```" + s1 + "\n" + s2 + "\n```";
       case "bbcode" : return `[code=${s1}]${s2}[/code]`;
     }
@@ -448,7 +743,8 @@ int main() {
   * summary -> Create a numeric list of items
   * param -> s -> String -> Comma separated list of items
   * return -> s -> String -> List code
-  * example -> olist `Press the button,Wait 5 seconds,Press the button again,done`
+  * example -> olist `Press the button,Wait 5 seconds,Press the button again,don
+e`
   */
   obj.olist = s => {
     if (typeof(s) == "string") {
@@ -653,7 +949,8 @@ html {
   height: 100%;
   text-align: middle;
   text-size-adjust: none; /* Fix Android Big Text */
-  touch-action: manipulation; /* Disable double tap zoom on touch devices to allow fast touch actions */
+  touch-action: manipulation; /* Disable double tap zoom on touch devices to all
+ow fast touch actions */
 } body {
   padding-bottom: 16px; /* Some Android screens cover bottom viewport */
   background-color: #eee;
@@ -695,7 +992,7 @@ html {
   margin: 0;
 } h5 {
   margin: 18px 0 -14px 0;
-} 
+}
 
 </style>`;
       case "markdown" : return "REMOVETHISLINE";
@@ -722,15 +1019,55 @@ const replaceAll = (str, pattern, newStr) => {
 }
 
 /* function -> htmlEntities
-* summary -> Convert all characters to HTML entities to avoid text being interpretated as code
+* summary -> Convert all characters to HTML entities to avoid text being interpr
+etated as code
 * param -> s -> String -> Code to covert to HTML entities
 * return -> a -> String -> HTML entities
-* example -> htmlEntities("My favourite tag is <iframe src='javascript:alert(1337)'></iframe>");
+* example -> htmlEntities("My favourite tag is <iframe src='javascript:alert(133
+7)'></iframe>");
 */
 const htmlEntities = s => {
   const r = "replace";
-  const a = s[r](/ /g,"&#32;")[r](/!/g,"&#33;")[r](/"/g,"&#34;")[r](/%/g,"&#37;")[r](/'/g,"&#39;")[r](/\(/g,"&#40;")[r](/\)/g,"&#41;")[r](/</g,"&#60;")[r](/>/g,"&#62;")[r](/`/g,"&#96;")[r](/a/g,"&#97;")[r](/A/g,"&#65;")[r](/e/g,"&#101;")[r](/E/g,"&#69;")[r](/i/g,"&#105;")[r](/I/g,"&#73;")[r](/o/g,"&#111;")[r](/O/g,"&#79;")[r](/u/g,"&#117;")[r](/U/g,"&#85;")[r](/{/g,"&#123;")[r](/}/g,"&#125;")[r](/‘/g,"&#8216;")[r](/’/g,"&#8217")[r](/‚/g,"&#8218;")[r](/“/g,"&#8220;")[r](/”/g,"&#8221;")[r](/„/g,"&#8222;")[r](/′/g,"&#8242;")[r](/″/g,"&#8244;")[r](/‹/g,"&#8249;")[r](/›/g,"&#8250;")[r](/s/g,"&#115;")[r](/S/g,"&#83;")[r](/\./g,"&#46;");
+  const a = s[r](/ /g," ")[r](/!/g,"!")[r](/"/g,""")[r](/%/g,"%")[r](/'/g,"'")[r
+](/\(/g,"(")[r](/\)/g,")")[r](/</g,"<")[r](/>/g,">")[r](/`/g,"`")[r](/a/g,"a")[r
+](/A/g,"A")[r](/e/g,"e")[r](/E/g,"E")[r](/i/g,"i")[r](/I/g,"I")[r](/o/g,"o")[r](
+/O/g,"O")[r](/u/g,"u")[r](/U/g,"U")[r](/{/g,"{")[r](/}/g,"}")[r](/‘/g,"‘")[r](/
+’/g,"’")[r](/‚/g,"‚")[r](/“/g,"“")[r](/”/g,"”")[r](/„/g,"„")[r](/′/g,"′")[r](/
+‴/g,"‴")[r](/‹/g,"‹")[r](/›/g,"›")[r](/s/g,"s")[r](/S/g,"S")[r](/\./g,".");
   return a;
 }
 
 export default fwl;
+
+References
+
+   1. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L25
+   2. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L34
+   3. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L59
+   4. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L93
+   5. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L107
+   6. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L121
+   7. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L135
+   8. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L149
+   9. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L163
+  10. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L177
+  11. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L191
+  12. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L205
+  13. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L219
+  14. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L233
+  15. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L247
+  16. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L272
+  17. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L299
+  18. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L335
+  19. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L366
+  20. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L380
+  21. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L394
+  22. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L408
+  23. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L453
+  24. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L498
+  25. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L512
+  26. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L537
+  27. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L613
+  28. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L647
+  29. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L716
+  30. file:///data/data/com.termux/files/usr/PROGRAMS/node/docu/docu/generated/fwl_docu.html#L730
