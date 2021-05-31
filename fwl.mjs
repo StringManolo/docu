@@ -245,6 +245,9 @@ html (endingBodyTag)
   */
   obj.link = s => {
     let s1, s2;
+    if (typeof(s) == "string") {
+      s = [s];
+    }
     if (/ /g.test(s[0])) {
       let aux = s[0].split(" ");
       s1 = aux.splice(aux.length - 1);
@@ -366,6 +369,9 @@ int main() {
   * example -> list `car,bike,plane,truck,bus`
   */
   obj.list = s => {
+    if (typeof(s) == "string") {
+      s = [s];
+    }
     /* TODO escapedcomma not working as intended */
     let aux = replaceAll(s[0], "\\\\,", "ESCAPEDCOMMA").split(",");
     for (let i in aux) {
@@ -408,6 +414,10 @@ int main() {
   * example -> olist `Press the button,Wait 5 seconds,Press the button again,done`
   */
   obj.olist = s => {
+    if (typeof(s) == "string") {
+      s = [s];
+    }
+
     let aux = replaceAll(s[0], "\\\\,", "ESCAPEDCOMMA").split(",");
     for (let i in aux) {
       aux[i] = replaceAll(aux[i], "ESCAPEDCOMMA", ",");

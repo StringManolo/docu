@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /* This commentaries are made by hand to be processed by https://github.com/StringManolo/docu */
 
 /* lang -> javascript
@@ -6,8 +7,8 @@
 * filetype -> ES6 module
 * description -> Docu is a code geneator CLI tool. Is intended to generate documentation in html, markdown and bbcode from code commentaries.
 * summary -> CLI tool to create documents from commentaries in html, markdown and bbcode.
+* dependency -> node https://node.org,fwl.mjs https://github.com/StringManolo/fwl
 */
-
 
 import fs from "fs";
 import fwl from "./fwl.mjs";
@@ -90,8 +91,17 @@ const processParts = part => {
     case "name": return h1 (`${part[1]}`) + hr ``;
     case "filetype": return h3 (`${part[1]}`) + hr ``;
     case "description": return h4 (`${part[1]}`) + hr ``;
+    case "dependency": {
+      const dLinks = part[1].split(",");
+      let dGenerated = "";
+      for (let i in dLinks) {
+        dGenerated += link(dLinks[i]) + ",";
+      }
+      return list(dGenerated.substr(0, dGenerated.length-1));
+    }
 
     case "variable":
+    case "object":
     case "function":
     case "property":
     case "method": return p("") + br("") + h5(italic (`${part[0]}`) + " " + bold (`${part[1]}`)) + br ``;
