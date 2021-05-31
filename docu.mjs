@@ -83,7 +83,7 @@ for (let i in file) {
 
 
 let lang = "unknown";
-let htmlDocLink = "";
+let sourceLink = "";
 const processParts = (part, lineNumber) => {
   let aux = "";
   switch(part[0]) {
@@ -95,8 +95,8 @@ const processParts = (part, lineNumber) => {
       t = title (`${part[1]}`);
     break;
 
-    case "htmlDocumentationLink":
-      htmlDocLink = part[1];
+    case "sourceLink":
+      sourceLink = part[1];
     break;
        
 
@@ -121,7 +121,7 @@ const processParts = (part, lineNumber) => {
       if (documentType == "html") {
         lineNumberLink = link(`${lineNumber} #line${lineNumber}`);
       } else {
-        lineNumberLink = link(`${lineNumber} ${htmlDocLink}#${lineNumber}`);
+        lineNumberLink = link(`${lineNumber} ${sourceLink}#${lineNumber}`);
       }
 
       return p("") + br("") + h5(italic (`${part[0]}`) + " " + bold (`${part[1]}`) + "  " + lineNumberLink) + br ``;

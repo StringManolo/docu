@@ -6,7 +6,7 @@
 * filetype -> ES6 module
 * description -> FWL (Function Web Language) is a javascript ES6 module code geneator. Is intended to write full featured documentation and generate html, markdown and bbcode.
 * summary -> Library to create documents in html, markdown and bbcode.
-* htmlDocumentationLink -> https://github.com/StringManolo/docu/blob/master/generated/fwl_docu.html
+* sourceLink -> https://github.com/StringManolo/docu/blob/master/fwl.mjs
 */
 
 /* function -> fwl
