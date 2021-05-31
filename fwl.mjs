@@ -320,6 +320,42 @@ int main() {
     }
   }
 
+  /* method -> obj.code
+  * summary -> Create a highlighted code block
+  * param -> s -> String -> Code. First line is only the language name
+  * return -> s -> String -> Code block.
+  * example -> code `#include <iostream>
+
+int main() {
+  std::cout << "Hello World!" << std::endl;
+  return 0;
+}`
+  */
+  obj.rawCode = s => {
+    let s1, s2;
+    if (typeof(s) != "string") {
+      s = s[0];
+    }
+    if (/(\r\n|\r|\n)/g.test(s)) {
+      let aux = s.split("\n");
+      s1 = aux.splice(0, 1);
+      s2 = aux.join("\n");
+    } else {
+      if (/ /g.test(s)) {
+        let aux = s.split(" ");
+        s1 = aux.splice(aux.length - 1);
+        s2 = aux.join(" ");
+      } else {
+        s1 = s;
+      }
+    }
+    switch(obj.documentType) {
+      case "html" : return `<pre><code lang="${s1}">${s2}</code></pre>`;
+      case "markdown" : return "```" + s1 + "\n" + s2 + "\n```";
+      case "bbcode" : return `[code=${s1}]${s2}[/code]`;
+    }
+  }
+
   /* method -> obj.bold
   * summary -> Make text bold
   * param -> s -> String -> Text

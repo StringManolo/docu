@@ -13,7 +13,7 @@ Library to create documents in html, markdown and bbcode.
 
 
 
-[size=11pt][b][i]function[/i] [b]fwl[/b][/b][/size]
+[size=11pt][b][i]function[/i] [b]fwl[/b]  [url=#line24]24[/url][/b][/size]
 Bind the library methods to the object
 Argument: [b]obj[/b] [i]Object[/i]   Object to bind the methods to
 Return: [i]undefined[/i] 
@@ -27,7 +27,7 @@ text(`This is a template using javascript variables ${new Date()}`)
 )[/code]
 
 
-[size=11pt][b][i]property[/i] [b]obj.documentType[/b][/b][/size]
+[size=11pt][b][i]property[/i] [b]obj.documentType[/b]  [url=#line33]33[/url][/b][/size]
 Specify what document to make
 Values: "html","markdown","bbcode"
 [code=javascript]obj.documentType = "html" // create outputs html
@@ -35,7 +35,7 @@ obj.documentType = "markdown" // create outputs markdown instead
 obj.documentType = "bbcode" // create outputs bbcode instead[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.create[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.create[/b]  [url=#line58]58[/url][/b][/size]
 Print and return the generated code for the chosen document
 Argument: [b](...s)[/b] [i]String[/i]   String/s to print
 Return: [b]str[/b] [i]String[/i]   All the strings
@@ -59,7 +59,7 @@ html `</body>
 );[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.html[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.html[/b]  [url=#line92]92[/url][/b][/size]
 Only add the string to generated html if HTML document.
 Argument: [b]s[/b] [i]String[/i]   HTML code to include
 Return: [b]s[/b] [i]String[/i]   Html code
@@ -82,91 +82,91 @@ html (endingBodyTag)
 // and will add the body tags if the document is html[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.title[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.title[/b]  [url=#line106]106[/url][/b][/size]
 Add title tag to generated html
 Argument: [b]s[/b] [i]String[/i]   Document title
 Return: [b]code[/b] [i]String[/i]   String between title tags (html)
 [code=javascript]title `Documentation`[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.text[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.text[/b]  [url=#line120]120[/url][/b][/size]
 Add text to the document
 Argument: [b]s[/b] [i]String[/i]   Text to add.
 Return: [b]s[/b] [i]String[/i]   Text code
 [code=javascript]text `This text will be shown in generated documents`[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.p[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.p[/b]  [url=#line134]134[/url][/b][/size]
 Add text in a paragraph to the document
 Argument: [b]s[/b] [i]String[/i]   Text to insert
 Return: [b]s[/b] [i]String[/i]   Paragraph code
 [code=javascript]p `My text`[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.br[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.br[/b]  [url=#line148]148[/url][/b][/size]
 Add a linebreak
 Argument: [b]s[/b] [i]String[/i]   Text to prepend the linebreak
 Return: [b]s[/b] [i]String[/i]   Linebreak code
 [code=javascript]br `This text is line break terminated`[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.h1[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.h1[/b]  [url=#line162]162[/url][/b][/size]
 Add text as h1
 Argument: [b]s[/b] [i]String[/i]   Heading text
 Return: [b]s[/b] [i]String[/i]   Heading code
 [code=javascript]h1 `Documentation`[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.h2[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.h2[/b]  [url=#line176]176[/url][/b][/size]
 Add text as h2
 Argument: [b]s[/b] [i]String[/i]   Heading text
 Return: [b]s[/b] [i]String[/i]   Heading code
 [code=javascript]h2 `Articles`[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.h3[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.h3[/b]  [url=#line190]190[/url][/b][/size]
 Add text as h1
 Argument: [b]s[/b] [i]String[/i]   Heading text
 Return: [b]s[/b] [i]String[/i]   Heading code
 [code=javascript]h3 `Article Title`[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.h4[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.h4[/b]  [url=#line204]204[/url][/b][/size]
 Add text as h1
 Argument: [b]s[/b] [i]String[/i]   Heading text
 Return: [b]s[/b] [i]String[/i]   Heading code
 [code=javascript]h4 `Article Content Title`[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.h5[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.h5[/b]  [url=#line218]218[/url][/b][/size]
 Add text as h1
 Argument: [b]s[/b] [i]String[/i]   Heading text
 Return: [b]s[/b] [i]String[/i]   Heading code
 [code=javascript]h5 `Part of the article`[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.h6[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.h6[/b]  [url=#line232]232[/url][/b][/size]
 Add text as h1
 Argument: [b]s[/b] [i]String[/i]   Heading text
 Return: [b]s[/b] [i]String[/i]   Heading code
 [code=javascript]h6 `Small title`[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.link[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.link[/b]  [url=#line246]246[/url][/b][/size]
 Create a clickable link
 Argument: [b]s[/b] [i]String[/i]   Link text + space + url
 Return: [b]s[/b] [i]String[/i]   Clickable link code
 [code=javascript]link `StringManolo Github Account Link https://github.com/StringManolo`[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.image[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.image[/b]  [url=#line271]271[/url][/b][/size]
 Create a image
 Argument: [b]s[/b] [i]String[/i]   Alt text + space + url
 Return: [b]s[/b] [i]String[/i]   Image code
 [code=javascript]image `google favicon https://google.com/favicon.ico`[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.code[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.code[/b]  [url=#line298]298[/url][/b][/size]
 Create a highlighted code block
 Argument: [b]s[/b] [i]String[/i]   Code. First line is only the language name
 Return: [b]s[/b] [i]String[/i]   Code block.
@@ -178,56 +178,68 @@ int main() {
 }`[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.bold[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.code[/b]  [url=#line334]334[/url][/b][/size]
+Create a highlighted code block
+Argument: [b]s[/b] [i]String[/i]   Code. First line is only the language name
+Return: [b]s[/b] [i]String[/i]   Code block.
+[code=javascript]code `#include <iostream>
+
+int main() {
+  std::cout << "Hello World!" << std::endl;
+  return 0;
+}`[/code]
+
+
+[size=11pt][b][i]method[/i] [b]obj.bold[/b]  [url=#line365]365[/url][/b][/size]
 Make text bold
 Argument: [b]s[/b] [i]String[/i]   Text
 Return: [b]s[/b] [i]String[/i]   Bold text
 [code=javascript]bold `important`;[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.italic[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.italic[/b]  [url=#line379]379[/url][/b][/size]
 Make text italic
 Argument: [b]s[/b] [i]String[/i]   Text
 Return: [b]s[/b] [i]String[/i]   Italized text
 [code=javascript]italic `cool`[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.underline[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.underline[/b]  [url=#line393]393[/url][/b][/size]
 Underline the text
 Argument: [b]s[/b] [i]String[/i]   Text
 Return: [b]s[/b] [i]String[/i]   Underlined text (markdown returns normal text)
 [code=javascript]underline `underlined text`[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.list[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.list[/b]  [url=#line407]407[/url][/b][/size]
 Create a dotted list of items
 Argument: [b]s[/b] [i]String[/i]   Comma separated list of items
 Return: [b]s[/b] [i]String[/i]   List code
 [code=javascript]list `car,bike,plane,truck,bus`[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.olist[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.olist[/b]  [url=#line452]452[/url][/b][/size]
 Create a numeric list of items
 Argument: [b]s[/b] [i]String[/i]   Comma separated list of items
 Return: [b]s[/b] [i]String[/i]   List code
 [code=javascript]olist `Press the button,Wait 5 seconds,Press the button again,done`[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.hr[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.hr[/b]  [url=#line497]497[/url][/b][/size]
 Add a horizontal line separator
 Argument: [b]()[/b]
 Return: [b]s[/b] [i]String[/i]   Horizontal separator code
 [code=javascript]hr ``[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.quote[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.quote[/b]  [url=#line511]511[/url][/b][/size]
 Create a quoted block
 Argument: [b]s[/b] [i]String[/i]   Text block
 Return: [b]s[/b] [i]String[/i]   Quoted block
 [code=javascript]quote `"This text is being quoted"`[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.table[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.table[/b]  [url=#line536]536[/url][/b][/size]
 Create a table
 Argument: [b]s[/b] [i]String[/i]   | separated list
 Return: [b]s[/b] [i]String[/i]   Table code
@@ -236,21 +248,21 @@ bag | 12€
 shoes | 3€`[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.style_tables[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.style_tables[/b]  [url=#line612]612[/url][/b][/size]
 Add tables css if generating a html document
 Argument: [b]()[/b]
 Return: [b]s[/b] [i]String[/i]   CSS style code
 [code=javascript]style_tables ``[/code]
 
 
-[size=11pt][b][i]method[/i] [b]obj.style_default[/b][/b][/size]
+[size=11pt][b][i]method[/i] [b]obj.style_default[/b]  [url=#line646]646[/url][/b][/size]
 Add document css if generating a html document
 Argument: [b]()[/b]
 Return: [b]s[/b] [i]String[/i]   CSS style code
 [code=javascript]style_default``[/code]
 
 
-[size=11pt][b][i]function[/i] [b]replaceAll[/b][/b][/size]
+[size=11pt][b][i]function[/i] [b]replaceAll[/b]  [url=#line712]712[/url][/b][/size]
 Replace all ocurrences of a string from the text
 Argument: [b]str[/b] [i]String[/i]   Text to replace findings from
 Argument: [b]pattern[/b] [i]String[/i]   Text (coverted to regular expression) to replace
@@ -259,8 +271,743 @@ Return: [b]s[/b] [i]String[/i]   Text with all ocurrences replaced
 [code=javascript]replaceAll("hello Manolo, hello", "hello", "bye");[/code]
 
 
-[size=11pt][b][i]function[/i] [b]htmlEntities[/b][/b][/size]
+[size=11pt][b][i]function[/i] [b]htmlEntities[/b]  [url=#line726]726[/url][/b][/size]
 Convert all characters to HTML entities to avoid text being interpretated as code
 Argument: [b]s[/b] [i]String[/i]   Code to covert to HTML entities
 Return: [b]a[/b] [i]String[/i]   HTML entities
 [code=javascript]htmlEntities("My favourite tag is <iframe src='javascript:alert(1337)'></iframe>");[/code]
+
+Source:[code=html]<span id="line1">/*&#32;Th&#105;&#115;&#32;c&#111;mm&#101;nt&#97;r&#105;&#101;&#115;&#32;&#97;r&#101;&#32;m&#97;d&#101;&#32;by&#32;h&#97;nd&#32;t&#111;&#32;b&#101;&#32;pr&#111;c&#101;&#115;&#115;&#101;d&#32;by&#32;http&#115;://g&#105;th&#117;b&#46;c&#111;m/&#83;tr&#105;ngM&#97;n&#111;l&#111;/d&#111;c&#117;&#32;*/</span>
+<span id="line2"></span>
+<span id="line3">/*&#32;l&#97;ng&#32;-&#62;&#32;j&#97;v&#97;&#115;cr&#105;pt</span>
+<span id="line4">*&#32;n&#97;m&#101;&#32;-&#62;&#32;fwl</span>
+<span id="line5">*&#32;t&#105;tl&#101;&#32;-&#62;&#32;FWL&#32;-&#32;D&#111;c&#117;m&#101;nt&#97;t&#105;&#111;n</span>
+<span id="line6">*&#32;f&#105;l&#101;typ&#101;&#32;-&#62;&#32;&#69;&#83;6&#32;m&#111;d&#117;l&#101;</span>
+<span id="line7">*&#32;d&#101;&#115;cr&#105;pt&#105;&#111;n&#32;-&#62;&#32;FWL&#32;&#40;F&#117;nct&#105;&#111;n&#32;W&#101;b&#32;L&#97;ng&#117;&#97;g&#101;&#41;&#32;&#105;&#115;&#32;&#97;&#32;j&#97;v&#97;&#115;cr&#105;pt&#32;&#69;&#83;6&#32;m&#111;d&#117;l&#101;&#32;c&#111;d&#101;&#32;g&#101;n&#101;&#97;t&#111;r&#46;&#32;&#73;&#115;&#32;&#105;nt&#101;nd&#101;d&#32;t&#111;&#32;wr&#105;t&#101;&#32;f&#117;ll&#32;f&#101;&#97;t&#117;r&#101;d&#32;d&#111;c&#117;m&#101;nt&#97;t&#105;&#111;n&#32;&#97;nd&#32;g&#101;n&#101;r&#97;t&#101;&#32;html,&#32;m&#97;rkd&#111;wn&#32;&#97;nd&#32;bbc&#111;d&#101;&#46;</span>
+<span id="line8">*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;L&#105;br&#97;ry&#32;t&#111;&#32;cr&#101;&#97;t&#101;&#32;d&#111;c&#117;m&#101;nt&#115;&#32;&#105;n&#32;html,&#32;m&#97;rkd&#111;wn&#32;&#97;nd&#32;bbc&#111;d&#101;&#46;</span>
+<span id="line9">*/</span>
+<span id="line10"></span>
+<span id="line11">/*&#32;f&#117;nct&#105;&#111;n&#32;-&#62;&#32;fwl</span>
+<span id="line12">*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;B&#105;nd&#32;th&#101;&#32;l&#105;br&#97;ry&#32;m&#101;th&#111;d&#115;&#32;t&#111;&#32;th&#101;&#32;&#111;bj&#101;ct</span>
+<span id="line13">*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#111;bj&#32;-&#62;&#32;&#79;bj&#101;ct&#32;-&#62;&#32;&#79;bj&#101;ct&#32;t&#111;&#32;b&#105;nd&#32;th&#101;&#32;m&#101;th&#111;d&#115;&#32;t&#111;</span>
+<span id="line14">*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#117;nd&#101;f&#105;n&#101;d</span>
+<span id="line15">*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;&#105;mp&#111;rt&#32;fwl&#32;fr&#111;m&#32;&#34;&#46;/fwl&#46;mj&#115;&#34;;</span>
+<span id="line16">fwl&#40;gl&#111;b&#97;l&#41;;</span>
+<span id="line17">cr&#101;&#97;t&#101;&#40;</span>
+<span id="line18">h1&#32;&#96;&#69;x&#97;mpl&#101;&#96;,</span>
+<span id="line19">p&#32;&#96;Th&#105;&#115;&#32;&#105;&#115;&#32;&#97;&#32;p&#97;r&#97;gr&#97;ph&#96;</span>
+<span id="line20">hr&#32;&#96;&#96;</span>
+<span id="line21">t&#101;xt&#40;&#96;Th&#105;&#115;&#32;&#105;&#115;&#32;&#97;&#32;t&#101;mpl&#97;t&#101;&#32;&#117;&#115;&#105;ng&#32;j&#97;v&#97;&#115;cr&#105;pt&#32;v&#97;r&#105;&#97;bl&#101;&#115;&#32;$&#123;n&#101;w&#32;D&#97;t&#101;&#40;&#41;&#125;&#96;&#41;</span>
+<span id="line22">&#41;</span>
+<span id="line23">*/</span>
+<span id="line24">c&#111;n&#115;t&#32;fwl&#32;=&#32;&#111;bj&#32;=&#62;&#32;&#123;</span>
+<span id="line25"></span>
+<span id="line26">&#32;&#32;/*&#32;pr&#111;p&#101;rty&#32;-&#62;&#32;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;</span>
+<span id="line27">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;&#83;p&#101;c&#105;fy&#32;wh&#97;t&#32;d&#111;c&#117;m&#101;nt&#32;t&#111;&#32;m&#97;k&#101;</span>
+<span id="line28">&#32;&#32;*&#32;v&#97;l&#117;&#101;&#115;&#32;-&#62;&#32;&#34;html&#34;,&#34;m&#97;rkd&#111;wn&#34;,&#34;bbc&#111;d&#101;&#34;</span>
+<span id="line29">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#32;=&#32;&#34;html&#34;&#32;//&#32;cr&#101;&#97;t&#101;&#32;&#111;&#117;tp&#117;t&#115;&#32;html</span>
+<span id="line30">&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#32;=&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;//&#32;cr&#101;&#97;t&#101;&#32;&#111;&#117;tp&#117;t&#115;&#32;m&#97;rkd&#111;wn&#32;&#105;n&#115;t&#101;&#97;d</span>
+<span id="line31">&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#32;=&#32;&#34;bbc&#111;d&#101;&#34;&#32;//&#32;cr&#101;&#97;t&#101;&#32;&#111;&#117;tp&#117;t&#115;&#32;bbc&#111;d&#101;&#32;&#105;n&#115;t&#101;&#97;d</span>
+<span id="line32">&#32;&#32;*/</span>
+<span id="line33">&#32;&#32;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#32;=&#32;&#34;html&#34;;</span>
+<span id="line34"></span>
+<span id="line35">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;cr&#101;&#97;t&#101;</span>
+<span id="line36">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;Pr&#105;nt&#32;&#97;nd&#32;r&#101;t&#117;rn&#32;th&#101;&#32;g&#101;n&#101;r&#97;t&#101;d&#32;c&#111;d&#101;&#32;f&#111;r&#32;th&#101;&#32;ch&#111;&#115;&#101;n&#32;d&#111;c&#117;m&#101;nt</span>
+<span id="line37">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#40;&#46;&#46;&#46;&#115;&#41;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;&#83;tr&#105;ng/&#115;&#32;t&#111;&#32;pr&#105;nt</span>
+<span id="line38">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;tr&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;&#65;ll&#32;th&#101;&#32;&#115;tr&#105;ng&#115;</span>
+<span id="line39">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;cr&#101;&#97;t&#101;&#32;&#40;</span>
+<span id="line40">html&#32;&#96;&#60;&#33;D&#79;CTYP&#69;&#32;html&#62;</span>
+<span id="line41">&#60;html&#62;</span>
+<span id="line42">&#60;h&#101;&#97;d&#62;</span>
+<span id="line43">&#60;m&#101;t&#97;&#32;ch&#97;r&#115;&#101;t=&#34;&#117;tf-8&#34;&#62;&#96;,</span>
+<span id="line44"></span>
+<span id="line45">t&#105;tl&#101;&#32;&#96;FWL&#96;,</span>
+<span id="line46"></span>
+<span id="line47">html&#32;&#96;&#60;/h&#101;&#97;d&#62;</span>
+<span id="line48">&#60;b&#111;dy&#62;&#96;,</span>
+<span id="line49"></span>
+<span id="line50">h1&#32;&#96;FWL&#32;&#40;F&#117;nct&#105;&#111;n&#32;W&#101;b&#32;L&#97;ng&#117;&#97;g&#101;&#41;&#96;,</span>
+<span id="line51"></span>
+<span id="line52">h3&#32;&#96;FWL&#32;&#105;&#115;&#32;&#97;&#32;&#115;&#105;mpl&#101;&#32;&#34;l&#97;ng&#117;&#97;g&#101;&#34;&#32;d&#101;&#115;&#105;gn&#101;d&#32;t&#111;&#32;b&#117;&#105;ld&#32;w&#101;bp&#97;g&#101;&#115;&#32;&#97;nd&#32;d&#111;c&#117;m&#101;nt&#115;&#32;&#105;n&#32;html,&#32;m&#97;rkd&#111;wn,&#32;bbc&#111;d&#101;&#46;&#46;&#46;&#96;,</span>
+<span id="line53"></span>
+<span id="line54">html&#32;&#96;&#60;/b&#111;dy&#62;</span>
+<span id="line55">&#60;/html&#62;&#96;</span>
+<span id="line56">&#41;;</span>
+<span id="line57">&#32;&#32;*/</span>
+<span id="line58">&#32;&#32;&#111;bj&#46;cr&#101;&#97;t&#101;&#32;=&#32;&#40;&#46;&#46;&#46;&#115;&#41;&#32;=&#62;&#32;&#123;</span>
+<span id="line59">&#32;&#32;&#32;&#32;l&#101;t&#32;&#115;tr&#32;=&#32;&#34;&#34;;</span>
+<span id="line60">&#32;&#32;&#32;&#32;f&#111;r&#32;&#40;l&#101;t&#32;&#105;&#32;&#105;n&#32;&#115;&#41;&#32;&#123;</span>
+<span id="line61">&#32;&#32;&#32;&#32;&#32;&#32;&#105;f&#32;&#40;&#33;/R&#69;M&#79;V&#69;TH&#73;&#83;L&#73;N&#69;/g&#46;t&#101;&#115;t&#40;&#115;[&#105;]&#41;&#41;&#32;&#123;</span>
+<span id="line62">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#96;$&#123;&#115;[&#105;]&#125;\n&#96;;</span>
+<span id="line63">&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line64">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line65">&#32;&#32;&#32;&#32;c&#111;n&#115;&#111;l&#101;&#46;l&#111;g&#40;&#115;tr&#41;;</span>
+<span id="line66">&#32;&#32;&#32;&#32;r&#101;t&#117;rn&#32;&#115;tr;</span>
+<span id="line67">&#32;&#32;&#125;</span>
+<span id="line68"></span>
+<span id="line69"></span>
+<span id="line70">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;html</span>
+<span id="line71">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;&#79;nly&#32;&#97;dd&#32;th&#101;&#32;&#115;tr&#105;ng&#32;t&#111;&#32;g&#101;n&#101;r&#97;t&#101;d&#32;html&#32;&#105;f&#32;HTML&#32;d&#111;c&#117;m&#101;nt&#46;</span>
+<span id="line72">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;HTML&#32;c&#111;d&#101;&#32;t&#111;&#32;&#105;ncl&#117;d&#101;</span>
+<span id="line73">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;Html&#32;c&#111;d&#101;</span>
+<span id="line74">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;html&#32;&#96;&#60;&#33;D&#79;CTYP&#69;&#32;html&#62;</span>
+<span id="line75">&#60;html&#62;</span>
+<span id="line76">&#60;h&#101;&#97;d&#62;</span>
+<span id="line77">&#60;m&#101;t&#97;&#32;ch&#97;r&#115;&#101;t=&#34;&#117;tf-8&#34;&#62;</span>
+<span id="line78">&#60;/h&#101;&#97;d&#62;</span>
+<span id="line79">&#96;</span>
+<span id="line80">c&#111;n&#115;t&#32;&#115;t&#97;rt&#105;ngB&#111;dyT&#97;g&#32;=&#32;&#34;&#60;b&#111;dy&#62;&#34;;</span>
+<span id="line81">c&#111;n&#115;t&#32;&#101;nd&#105;ngB&#111;dyT&#97;g&#32;=&#32;&#34;&#60;/b&#111;dy&#62;&#34;;</span>
+<span id="line82"></span>
+<span id="line83">cr&#101;&#97;t&#101;&#32;&#40;</span>
+<span id="line84">html&#32;&#40;&#115;t&#97;rt&#105;ngB&#111;dyT&#97;g&#41;,</span>
+<span id="line85">h1&#32;&#96;H&#101;ll&#111;&#96;,</span>
+<span id="line86">html&#32;&#40;&#101;nd&#105;ngB&#111;dyT&#97;g&#41;</span>
+<span id="line87">&#96;&#41;;</span>
+<span id="line88"></span>
+<span id="line89">//&#32;Th&#105;&#115;&#32;w&#105;ll&#32;g&#101;n&#101;r&#97;t&#101;&#32;&#111;nly&#32;th&#101;&#32;h1&#32;t&#97;g&#32;&#105;n&#32;m&#97;rkd&#111;wn&#32;&#97;nd&#32;bbc&#111;d&#101;</span>
+<span id="line90">//&#32;&#97;nd&#32;w&#105;ll&#32;&#97;dd&#32;th&#101;&#32;b&#111;dy&#32;t&#97;g&#115;&#32;&#105;f&#32;th&#101;&#32;d&#111;c&#117;m&#101;nt&#32;&#105;&#115;&#32;html</span>
+<span id="line91">&#32;&#32;*/</span>
+<span id="line92">&#32;&#32;&#111;bj&#46;html&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line93">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line94">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#115;;</span>
+<span id="line95">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#34;R&#69;M&#79;V&#69;TH&#73;&#83;L&#73;N&#69;&#34;;</span>
+<span id="line96">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#34;R&#69;M&#79;V&#69;TH&#73;&#83;L&#73;N&#69;&#34;;</span>
+<span id="line97">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line98">&#32;&#32;&#125;</span>
+<span id="line99"></span>
+<span id="line100">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;t&#105;tl&#101;</span>
+<span id="line101">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;&#65;dd&#32;t&#105;tl&#101;&#32;t&#97;g&#32;t&#111;&#32;g&#101;n&#101;r&#97;t&#101;d&#32;html</span>
+<span id="line102">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;D&#111;c&#117;m&#101;nt&#32;t&#105;tl&#101;</span>
+<span id="line103">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;c&#111;d&#101;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;&#83;tr&#105;ng&#32;b&#101;tw&#101;&#101;n&#32;t&#105;tl&#101;&#32;t&#97;g&#115;&#32;&#40;html&#41;</span>
+<span id="line104">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;t&#105;tl&#101;&#32;&#96;D&#111;c&#117;m&#101;nt&#97;t&#105;&#111;n&#96;</span>
+<span id="line105">&#32;&#32;*/</span>
+<span id="line106">&#32;&#32;&#111;bj&#46;t&#105;tl&#101;&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line107">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line108">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#60;t&#105;tl&#101;&#62;$&#123;&#115;&#125;&#60;/t&#105;tl&#101;&#62;&#96;;</span>
+<span id="line109">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#34;R&#69;M&#79;V&#69;TH&#73;&#83;L&#73;N&#69;&#34;;</span>
+<span id="line110">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#34;R&#69;M&#79;V&#69;TH&#73;&#83;L&#73;N&#69;&#34;;</span>
+<span id="line111">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line112">&#32;&#32;&#125;</span>
+<span id="line113"></span>
+<span id="line114">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;t&#101;xt</span>
+<span id="line115">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;&#65;dd&#32;t&#101;xt&#32;t&#111;&#32;th&#101;&#32;d&#111;c&#117;m&#101;nt</span>
+<span id="line116">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;T&#101;xt&#32;t&#111;&#32;&#97;dd&#46;</span>
+<span id="line117">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;T&#101;xt&#32;c&#111;d&#101;</span>
+<span id="line118">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;t&#101;xt&#32;&#96;Th&#105;&#115;&#32;t&#101;xt&#32;w&#105;ll&#32;b&#101;&#32;&#115;h&#111;wn&#32;&#105;n&#32;g&#101;n&#101;r&#97;t&#101;d&#32;d&#111;c&#117;m&#101;nt&#115;&#96;</span>
+<span id="line119">&#32;&#32;*/</span>
+<span id="line120">&#32;&#32;&#111;bj&#46;t&#101;xt&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line121">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line122">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#60;&#115;p&#97;n&#62;$&#123;&#115;&#125;&#60;/&#115;p&#97;n&#62;&#96;;</span>
+<span id="line123">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;$&#123;&#115;&#125;&#96;;</span>
+<span id="line124">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;$&#123;&#115;&#125;&#96;;</span>
+<span id="line125">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line126">&#32;&#32;&#125;</span>
+<span id="line127"></span>
+<span id="line128">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;p</span>
+<span id="line129">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;&#65;dd&#32;t&#101;xt&#32;&#105;n&#32;&#97;&#32;p&#97;r&#97;gr&#97;ph&#32;t&#111;&#32;th&#101;&#32;d&#111;c&#117;m&#101;nt</span>
+<span id="line130">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;T&#101;xt&#32;t&#111;&#32;&#105;n&#115;&#101;rt</span>
+<span id="line131">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;P&#97;r&#97;gr&#97;ph&#32;c&#111;d&#101;</span>
+<span id="line132">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;p&#32;&#96;My&#32;t&#101;xt&#96;</span>
+<span id="line133">&#32;&#32;*/</span>
+<span id="line134">&#32;&#32;&#111;bj&#46;p&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line135">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line136">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#60;p&#62;$&#123;&#115;&#125;&#60;/p&#62;&#96;;</span>
+<span id="line137">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#32;&#32;\n$&#123;&#115;&#125;&#32;&#32;\n&#96;;</span>
+<span id="line138">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;\n$&#123;&#115;&#125;\n&#96;;</span>
+<span id="line139">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line140">&#32;&#32;&#125;</span>
+<span id="line141"></span>
+<span id="line142">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;br</span>
+<span id="line143">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;&#65;dd&#32;&#97;&#32;l&#105;n&#101;br&#101;&#97;k</span>
+<span id="line144">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;T&#101;xt&#32;t&#111;&#32;pr&#101;p&#101;nd&#32;th&#101;&#32;l&#105;n&#101;br&#101;&#97;k</span>
+<span id="line145">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;L&#105;n&#101;br&#101;&#97;k&#32;c&#111;d&#101;</span>
+<span id="line146">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;br&#32;&#96;Th&#105;&#115;&#32;t&#101;xt&#32;&#105;&#115;&#32;l&#105;n&#101;&#32;br&#101;&#97;k&#32;t&#101;rm&#105;n&#97;t&#101;d&#96;</span>
+<span id="line147">&#32;&#32;*/</span>
+<span id="line148">&#32;&#32;&#111;bj&#46;br&#32;=&#32;&#40;&#115;=&#34;&#34;&#41;&#32;=&#62;&#32;&#123;</span>
+<span id="line149">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line150">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;$&#123;&#115;&#125;&#60;br&#32;/&#62;&#96;;</span>
+<span id="line151">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;$&#123;&#115;&#125;&#32;&#32;\n&#96;;</span>
+<span id="line152">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;$&#123;&#115;&#125;\n&#96;;</span>
+<span id="line153">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line154">&#32;&#32;&#125;</span>
+<span id="line155"></span>
+<span id="line156">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;h1</span>
+<span id="line157">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;&#65;dd&#32;t&#101;xt&#32;&#97;&#115;&#32;h1</span>
+<span id="line158">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;H&#101;&#97;d&#105;ng&#32;t&#101;xt</span>
+<span id="line159">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;H&#101;&#97;d&#105;ng&#32;c&#111;d&#101;</span>
+<span id="line160">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;h1&#32;&#96;D&#111;c&#117;m&#101;nt&#97;t&#105;&#111;n&#96;</span>
+<span id="line161">&#32;&#32;*/</span>
+<span id="line162">&#32;&#32;&#111;bj&#46;h1&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line163">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line164">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#60;h1&#62;$&#123;&#115;&#125;&#60;/h1&#62;&#96;;</span>
+<span id="line165">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;#&#32;$&#123;&#115;&#125;&#96;;</span>
+<span id="line166">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;[&#115;&#105;z&#101;=18pt][b]$&#123;&#115;&#125;[/b][/&#115;&#105;z&#101;]\n&#96;;&#32;//&#96;[h1]$&#123;&#115;&#125;[/h1]&#96;;</span>
+<span id="line167">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line168">&#32;&#32;&#125;</span>
+<span id="line169"></span>
+<span id="line170">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;h2</span>
+<span id="line171">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;&#65;dd&#32;t&#101;xt&#32;&#97;&#115;&#32;h2</span>
+<span id="line172">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;H&#101;&#97;d&#105;ng&#32;t&#101;xt</span>
+<span id="line173">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;H&#101;&#97;d&#105;ng&#32;c&#111;d&#101;</span>
+<span id="line174">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;h2&#32;&#96;&#65;rt&#105;cl&#101;&#115;&#96;</span>
+<span id="line175">&#32;&#32;*/</span>
+<span id="line176">&#32;&#32;&#111;bj&#46;h2&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line177">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line178">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#60;h2&#62;$&#123;&#115;&#125;&#60;/h2&#62;&#96;;</span>
+<span id="line179">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;##&#32;$&#123;&#115;&#125;&#96;;</span>
+<span id="line180">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;[&#115;&#105;z&#101;=16pt][b]$&#123;&#115;&#125;[/b][/&#115;&#105;z&#101;]\n&#96;;&#32;//&#96;[h2]$&#123;&#115;&#125;[/h2]&#96;;</span>
+<span id="line181">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line182">&#32;&#32;&#125;</span>
+<span id="line183"></span>
+<span id="line184">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;h3</span>
+<span id="line185">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;&#65;dd&#32;t&#101;xt&#32;&#97;&#115;&#32;h1</span>
+<span id="line186">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;H&#101;&#97;d&#105;ng&#32;t&#101;xt</span>
+<span id="line187">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;H&#101;&#97;d&#105;ng&#32;c&#111;d&#101;</span>
+<span id="line188">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;h3&#32;&#96;&#65;rt&#105;cl&#101;&#32;T&#105;tl&#101;&#96;</span>
+<span id="line189">&#32;&#32;*/</span>
+<span id="line190">&#32;&#32;&#111;bj&#46;h3&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line191">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line192">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#60;h3&#62;$&#123;&#115;&#125;&#60;/h3&#62;&#96;;</span>
+<span id="line193">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;###&#32;$&#123;&#115;&#125;&#96;;</span>
+<span id="line194">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;[&#115;&#105;z&#101;=15pt][b]$&#123;&#115;&#125;[/b][/&#115;&#105;z&#101;]\n&#96;;&#32;//&#96;[h3]$&#123;&#115;&#125;[/h3]&#96;;</span>
+<span id="line195">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line196">&#32;&#32;&#125;</span>
+<span id="line197"></span>
+<span id="line198">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;h4</span>
+<span id="line199">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;&#65;dd&#32;t&#101;xt&#32;&#97;&#115;&#32;h1</span>
+<span id="line200">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;H&#101;&#97;d&#105;ng&#32;t&#101;xt</span>
+<span id="line201">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;H&#101;&#97;d&#105;ng&#32;c&#111;d&#101;</span>
+<span id="line202">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;h4&#32;&#96;&#65;rt&#105;cl&#101;&#32;C&#111;nt&#101;nt&#32;T&#105;tl&#101;&#96;</span>
+<span id="line203">&#32;&#32;*/</span>
+<span id="line204">&#32;&#32;&#111;bj&#46;h4&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line205">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line206">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#60;h4&#62;$&#123;&#115;&#125;&#60;/h4&#62;&#96;;</span>
+<span id="line207">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;####&#32;$&#123;&#115;&#125;&#96;;</span>
+<span id="line208">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;[&#115;&#105;z&#101;=13pt][b]$&#123;&#115;&#125;[/b][/&#115;&#105;z&#101;]\n&#96;;&#32;//&#96;[h4]$&#123;&#115;&#125;[/h4]&#96;;</span>
+<span id="line209">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line210">&#32;&#32;&#125;</span>
+<span id="line211"></span>
+<span id="line212">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;h5</span>
+<span id="line213">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;&#65;dd&#32;t&#101;xt&#32;&#97;&#115;&#32;h1</span>
+<span id="line214">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;H&#101;&#97;d&#105;ng&#32;t&#101;xt</span>
+<span id="line215">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;H&#101;&#97;d&#105;ng&#32;c&#111;d&#101;</span>
+<span id="line216">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;h5&#32;&#96;P&#97;rt&#32;&#111;f&#32;th&#101;&#32;&#97;rt&#105;cl&#101;&#96;</span>
+<span id="line217">&#32;&#32;*/</span>
+<span id="line218">&#32;&#32;&#111;bj&#46;h5&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line219">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line220">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#60;h5&#62;$&#123;&#115;&#125;&#60;/h5&#62;&#96;;</span>
+<span id="line221">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;#####&#32;$&#123;&#115;&#125;&#96;;</span>
+<span id="line222">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;[&#115;&#105;z&#101;=11pt][b]$&#123;&#115;&#125;[/b][/&#115;&#105;z&#101;]&#96;;&#32;//&#96;[h5]$&#123;&#115;&#125;[/h5]&#96;;</span>
+<span id="line223">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line224">&#32;&#32;&#125;</span>
+<span id="line225"></span>
+<span id="line226">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;h6</span>
+<span id="line227">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;&#65;dd&#32;t&#101;xt&#32;&#97;&#115;&#32;h1</span>
+<span id="line228">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;H&#101;&#97;d&#105;ng&#32;t&#101;xt</span>
+<span id="line229">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;H&#101;&#97;d&#105;ng&#32;c&#111;d&#101;</span>
+<span id="line230">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;h6&#32;&#96;&#83;m&#97;ll&#32;t&#105;tl&#101;&#96;</span>
+<span id="line231">&#32;&#32;*/</span>
+<span id="line232">&#32;&#32;&#111;bj&#46;h6&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line233">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line234">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#60;h6&#62;$&#123;&#115;&#125;&#60;/h6&#62;&#96;;</span>
+<span id="line235">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;######&#32;$&#123;&#115;&#125;&#96;;</span>
+<span id="line236">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;[&#115;&#105;z&#101;=9pt][b]$&#123;&#115;&#125;[/b][/&#115;&#105;z&#101;]&#96;;&#32;//&#96;[h6]$&#123;&#115;&#125;[/h6]&#96;;</span>
+<span id="line237">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line238">&#32;&#32;&#125;</span>
+<span id="line239"></span>
+<span id="line240">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;l&#105;nk</span>
+<span id="line241">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;Cr&#101;&#97;t&#101;&#32;&#97;&#32;cl&#105;ck&#97;bl&#101;&#32;l&#105;nk</span>
+<span id="line242">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;L&#105;nk&#32;t&#101;xt&#32;+&#32;&#115;p&#97;c&#101;&#32;+&#32;&#117;rl</span>
+<span id="line243">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;Cl&#105;ck&#97;bl&#101;&#32;l&#105;nk&#32;c&#111;d&#101;</span>
+<span id="line244">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;l&#105;nk&#32;&#96;&#83;tr&#105;ngM&#97;n&#111;l&#111;&#32;G&#105;th&#117;b&#32;&#65;cc&#111;&#117;nt&#32;L&#105;nk&#32;http&#115;://g&#105;th&#117;b&#46;c&#111;m/&#83;tr&#105;ngM&#97;n&#111;l&#111;&#96;</span>
+<span id="line245">&#32;&#32;*/</span>
+<span id="line246">&#32;&#32;&#111;bj&#46;l&#105;nk&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line247">&#32;&#32;&#32;&#32;l&#101;t&#32;&#115;1,&#32;&#115;2;</span>
+<span id="line248">&#32;&#32;&#32;&#32;&#105;f&#32;&#40;typ&#101;&#111;f&#40;&#115;&#41;&#32;==&#32;&#34;&#115;tr&#105;ng&#34;&#41;&#32;&#123;</span>
+<span id="line249">&#32;&#32;&#32;&#32;&#32;&#32;&#115;&#32;=&#32;[&#115;];</span>
+<span id="line250">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line251">&#32;&#32;&#32;&#32;&#105;f&#32;&#40;/&#32;/g&#46;t&#101;&#115;t&#40;&#115;[0]&#41;&#41;&#32;&#123;</span>
+<span id="line252">&#32;&#32;&#32;&#32;&#32;&#32;l&#101;t&#32;&#97;&#117;x&#32;=&#32;&#115;[0]&#46;&#115;pl&#105;t&#40;&#34;&#32;&#34;&#41;;</span>
+<span id="line253">&#32;&#32;&#32;&#32;&#32;&#32;&#115;1&#32;=&#32;&#97;&#117;x&#46;&#115;pl&#105;c&#101;&#40;&#97;&#117;x&#46;l&#101;ngth&#32;-&#32;1&#41;;</span>
+<span id="line254">&#32;&#32;&#32;&#32;&#32;&#32;&#115;2&#32;=&#32;&#97;&#117;x&#46;j&#111;&#105;n&#40;&#34;&#32;&#34;&#41;;</span>
+<span id="line255">&#32;&#32;&#32;&#32;&#125;&#32;&#101;l&#115;&#101;&#32;&#123;</span>
+<span id="line256">&#32;&#32;&#32;&#32;&#32;&#32;&#115;1&#32;=&#32;&#115;[0];</span>
+<span id="line257">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line258">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line259">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#60;&#97;&#32;hr&#101;f=&#34;$&#123;&#115;1&#125;&#34;&#62;$&#123;&#115;2&#125;&#60;/&#97;&#62;&#96;;</span>
+<span id="line260">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;[$&#123;&#115;2&#125;]&#40;$&#123;&#115;1&#125;&#41;&#96;;</span>
+<span id="line261">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;[&#117;rl=$&#123;&#115;1&#125;]$&#123;&#115;2&#125;[/&#117;rl]&#96;;</span>
+<span id="line262">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line263">&#32;&#32;&#125;</span>
+<span id="line264"></span>
+<span id="line265">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;&#105;m&#97;g&#101;</span>
+<span id="line266">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;Cr&#101;&#97;t&#101;&#32;&#97;&#32;&#105;m&#97;g&#101;</span>
+<span id="line267">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;&#65;lt&#32;t&#101;xt&#32;+&#32;&#115;p&#97;c&#101;&#32;+&#32;&#117;rl</span>
+<span id="line268">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;&#73;m&#97;g&#101;&#32;c&#111;d&#101;</span>
+<span id="line269">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;&#105;m&#97;g&#101;&#32;&#96;g&#111;&#111;gl&#101;&#32;f&#97;v&#105;c&#111;n&#32;http&#115;://g&#111;&#111;gl&#101;&#46;c&#111;m/f&#97;v&#105;c&#111;n&#46;&#105;c&#111;&#96;</span>
+<span id="line270">&#32;&#32;*/</span>
+<span id="line271">&#32;&#32;&#111;bj&#46;&#105;m&#97;g&#101;&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line272">&#32;&#32;&#32;&#32;l&#101;t&#32;&#115;1,&#32;&#115;2;</span>
+<span id="line273">&#32;&#32;&#32;&#32;&#105;f&#32;&#40;/&#32;/g&#46;t&#101;&#115;t&#40;&#115;[0]&#41;&#41;&#32;&#123;</span>
+<span id="line274">&#32;&#32;&#32;&#32;&#32;&#32;l&#101;t&#32;&#97;&#117;x&#32;=&#32;&#115;[0]&#46;&#115;pl&#105;t&#40;&#34;&#32;&#34;&#41;;</span>
+<span id="line275">&#32;&#32;&#32;&#32;&#32;&#32;&#115;1&#32;=&#32;&#97;&#117;x&#46;&#115;pl&#105;c&#101;&#40;&#97;&#117;x&#46;l&#101;ngth&#32;-&#32;1&#41;;</span>
+<span id="line276">&#32;&#32;&#32;&#32;&#32;&#32;&#115;2&#32;=&#32;&#97;&#117;x&#46;j&#111;&#105;n&#40;&#34;&#32;&#34;&#41;;</span>
+<span id="line277">&#32;&#32;&#32;&#32;&#125;&#32;&#101;l&#115;&#101;&#32;&#123;</span>
+<span id="line278">&#32;&#32;&#32;&#32;&#32;&#32;&#115;1&#32;=&#32;&#115;[0];</span>
+<span id="line279">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line280">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line281">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#60;&#105;mg&#32;&#115;rc=&#34;$&#123;&#115;1&#125;&#34;&#32;&#97;lt=&#34;$&#123;&#115;2&#125;&#34;&#62;&#96;;</span>
+<span id="line282">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#33;[$&#123;&#115;2&#125;]&#40;$&#123;&#115;1&#125;&#41;&#96;;</span>
+<span id="line283">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;[&#105;mg&#32;&#97;lt=$&#123;&#115;2&#125;]$&#123;&#115;1&#125;[/&#105;mg]&#96;;</span>
+<span id="line284">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line285">&#32;&#32;&#125;</span>
+<span id="line286"></span>
+<span id="line287">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;c&#111;d&#101;</span>
+<span id="line288">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;Cr&#101;&#97;t&#101;&#32;&#97;&#32;h&#105;ghl&#105;ght&#101;d&#32;c&#111;d&#101;&#32;bl&#111;ck</span>
+<span id="line289">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;C&#111;d&#101;&#46;&#32;F&#105;r&#115;t&#32;l&#105;n&#101;&#32;&#105;&#115;&#32;&#111;nly&#32;th&#101;&#32;l&#97;ng&#117;&#97;g&#101;&#32;n&#97;m&#101;</span>
+<span id="line290">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;C&#111;d&#101;&#32;bl&#111;ck&#46;</span>
+<span id="line291">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;c&#111;d&#101;&#32;&#96;#&#105;ncl&#117;d&#101;&#32;&#60;&#105;&#111;&#115;tr&#101;&#97;m&#62;</span>
+<span id="line292"></span>
+<span id="line293">&#105;nt&#32;m&#97;&#105;n&#40;&#41;&#32;&#123;</span>
+<span id="line294">&#32;&#32;&#115;td::c&#111;&#117;t&#32;&#60;&#60;&#32;&#34;H&#101;ll&#111;&#32;W&#111;rld&#33;&#34;&#32;&#60;&#60;&#32;&#115;td::&#101;ndl;</span>
+<span id="line295">&#32;&#32;r&#101;t&#117;rn&#32;0;</span>
+<span id="line296">&#125;&#96;</span>
+<span id="line297">&#32;&#32;*/</span>
+<span id="line298">&#32;&#32;&#111;bj&#46;c&#111;d&#101;&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line299">&#32;&#32;&#32;&#32;l&#101;t&#32;&#115;1,&#32;&#115;2;</span>
+<span id="line300">&#32;&#32;&#32;&#32;&#105;f&#32;&#40;typ&#101;&#111;f&#40;&#115;&#41;&#32;&#33;=&#32;&#34;&#115;tr&#105;ng&#34;&#41;&#32;&#123;</span>
+<span id="line301">&#32;&#32;&#32;&#32;&#32;&#32;&#115;&#32;=&#32;&#115;[0];</span>
+<span id="line302">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line303">&#32;&#32;&#32;&#32;&#105;f&#32;&#40;/&#40;\r\n|\r|\n&#41;/g&#46;t&#101;&#115;t&#40;&#115;&#41;&#41;&#32;&#123;</span>
+<span id="line304">&#32;&#32;&#32;&#32;&#32;&#32;l&#101;t&#32;&#97;&#117;x&#32;=&#32;&#115;&#46;&#115;pl&#105;t&#40;&#34;\n&#34;&#41;;</span>
+<span id="line305">&#32;&#32;&#32;&#32;&#32;&#32;&#115;1&#32;=&#32;&#97;&#117;x&#46;&#115;pl&#105;c&#101;&#40;0,&#32;1&#41;;</span>
+<span id="line306">&#32;&#32;&#32;&#32;&#32;&#32;&#115;2&#32;=&#32;&#97;&#117;x&#46;j&#111;&#105;n&#40;&#34;\n&#34;&#41;;</span>
+<span id="line307">&#32;&#32;&#32;&#32;&#125;&#32;&#101;l&#115;&#101;&#32;&#123;</span>
+<span id="line308">&#32;&#32;&#32;&#32;&#32;&#32;&#105;f&#32;&#40;/&#32;/g&#46;t&#101;&#115;t&#40;&#115;&#41;&#41;&#32;&#123;</span>
+<span id="line309">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;l&#101;t&#32;&#97;&#117;x&#32;=&#32;&#115;&#46;&#115;pl&#105;t&#40;&#34;&#32;&#34;&#41;;</span>
+<span id="line310">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;1&#32;=&#32;&#97;&#117;x&#46;&#115;pl&#105;c&#101;&#40;&#97;&#117;x&#46;l&#101;ngth&#32;-&#32;1&#41;;</span>
+<span id="line311">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;2&#32;=&#32;&#97;&#117;x&#46;j&#111;&#105;n&#40;&#34;&#32;&#34;&#41;;</span>
+<span id="line312">&#32;&#32;&#32;&#32;&#32;&#32;&#125;&#32;&#101;l&#115;&#101;&#32;&#123;</span>
+<span id="line313">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;1&#32;=&#32;&#115;;</span>
+<span id="line314">&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line315">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line316">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line317">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#60;pr&#101;&#62;&#60;c&#111;d&#101;&#32;l&#97;ng=&#34;$&#123;&#115;1&#125;&#34;&#62;$&#123;html&#69;nt&#105;t&#105;&#101;&#115;&#40;&#115;2&#41;&#125;&#60;/c&#111;d&#101;&#62;&#60;/pr&#101;&#62;&#96;;</span>
+<span id="line318">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#34;&#96;&#96;&#96;&#34;&#32;+&#32;&#115;1&#32;+&#32;&#34;\n&#34;&#32;+&#32;&#115;2&#32;+&#32;&#34;\n&#96;&#96;&#96;&#34;;</span>
+<span id="line319">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;[c&#111;d&#101;=$&#123;&#115;1&#125;]$&#123;&#115;2&#125;[/c&#111;d&#101;]&#96;;</span>
+<span id="line320">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line321">&#32;&#32;&#125;</span>
+<span id="line322"></span>
+<span id="line323">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;c&#111;d&#101;</span>
+<span id="line324">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;Cr&#101;&#97;t&#101;&#32;&#97;&#32;h&#105;ghl&#105;ght&#101;d&#32;c&#111;d&#101;&#32;bl&#111;ck</span>
+<span id="line325">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;C&#111;d&#101;&#46;&#32;F&#105;r&#115;t&#32;l&#105;n&#101;&#32;&#105;&#115;&#32;&#111;nly&#32;th&#101;&#32;l&#97;ng&#117;&#97;g&#101;&#32;n&#97;m&#101;</span>
+<span id="line326">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;C&#111;d&#101;&#32;bl&#111;ck&#46;</span>
+<span id="line327">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;c&#111;d&#101;&#32;&#96;#&#105;ncl&#117;d&#101;&#32;&#60;&#105;&#111;&#115;tr&#101;&#97;m&#62;</span>
+<span id="line328"></span>
+<span id="line329">&#105;nt&#32;m&#97;&#105;n&#40;&#41;&#32;&#123;</span>
+<span id="line330">&#32;&#32;&#115;td::c&#111;&#117;t&#32;&#60;&#60;&#32;&#34;H&#101;ll&#111;&#32;W&#111;rld&#33;&#34;&#32;&#60;&#60;&#32;&#115;td::&#101;ndl;</span>
+<span id="line331">&#32;&#32;r&#101;t&#117;rn&#32;0;</span>
+<span id="line332">&#125;&#96;</span>
+<span id="line333">&#32;&#32;*/</span>
+<span id="line334">&#32;&#32;&#111;bj&#46;r&#97;wC&#111;d&#101;&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line335">&#32;&#32;&#32;&#32;l&#101;t&#32;&#115;1,&#32;&#115;2;</span>
+<span id="line336">&#32;&#32;&#32;&#32;&#105;f&#32;&#40;typ&#101;&#111;f&#40;&#115;&#41;&#32;&#33;=&#32;&#34;&#115;tr&#105;ng&#34;&#41;&#32;&#123;</span>
+<span id="line337">&#32;&#32;&#32;&#32;&#32;&#32;&#115;&#32;=&#32;&#115;[0];</span>
+<span id="line338">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line339">&#32;&#32;&#32;&#32;&#105;f&#32;&#40;/&#40;\r\n|\r|\n&#41;/g&#46;t&#101;&#115;t&#40;&#115;&#41;&#41;&#32;&#123;</span>
+<span id="line340">&#32;&#32;&#32;&#32;&#32;&#32;l&#101;t&#32;&#97;&#117;x&#32;=&#32;&#115;&#46;&#115;pl&#105;t&#40;&#34;\n&#34;&#41;;</span>
+<span id="line341">&#32;&#32;&#32;&#32;&#32;&#32;&#115;1&#32;=&#32;&#97;&#117;x&#46;&#115;pl&#105;c&#101;&#40;0,&#32;1&#41;;</span>
+<span id="line342">&#32;&#32;&#32;&#32;&#32;&#32;&#115;2&#32;=&#32;&#97;&#117;x&#46;j&#111;&#105;n&#40;&#34;\n&#34;&#41;;</span>
+<span id="line343">&#32;&#32;&#32;&#32;&#125;&#32;&#101;l&#115;&#101;&#32;&#123;</span>
+<span id="line344">&#32;&#32;&#32;&#32;&#32;&#32;&#105;f&#32;&#40;/&#32;/g&#46;t&#101;&#115;t&#40;&#115;&#41;&#41;&#32;&#123;</span>
+<span id="line345">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;l&#101;t&#32;&#97;&#117;x&#32;=&#32;&#115;&#46;&#115;pl&#105;t&#40;&#34;&#32;&#34;&#41;;</span>
+<span id="line346">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;1&#32;=&#32;&#97;&#117;x&#46;&#115;pl&#105;c&#101;&#40;&#97;&#117;x&#46;l&#101;ngth&#32;-&#32;1&#41;;</span>
+<span id="line347">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;2&#32;=&#32;&#97;&#117;x&#46;j&#111;&#105;n&#40;&#34;&#32;&#34;&#41;;</span>
+<span id="line348">&#32;&#32;&#32;&#32;&#32;&#32;&#125;&#32;&#101;l&#115;&#101;&#32;&#123;</span>
+<span id="line349">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;1&#32;=&#32;&#115;;</span>
+<span id="line350">&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line351">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line352">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line353">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#60;pr&#101;&#62;&#60;c&#111;d&#101;&#32;l&#97;ng=&#34;$&#123;&#115;1&#125;&#34;&#62;$&#123;&#115;2&#125;&#60;/c&#111;d&#101;&#62;&#60;/pr&#101;&#62;&#96;;</span>
+<span id="line354">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#34;&#96;&#96;&#96;&#34;&#32;+&#32;&#115;1&#32;+&#32;&#34;\n&#34;&#32;+&#32;&#115;2&#32;+&#32;&#34;\n&#96;&#96;&#96;&#34;;</span>
+<span id="line355">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;[c&#111;d&#101;=$&#123;&#115;1&#125;]$&#123;&#115;2&#125;[/c&#111;d&#101;]&#96;;</span>
+<span id="line356">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line357">&#32;&#32;&#125;</span>
+<span id="line358"></span>
+<span id="line359">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;b&#111;ld</span>
+<span id="line360">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;M&#97;k&#101;&#32;t&#101;xt&#32;b&#111;ld</span>
+<span id="line361">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;T&#101;xt</span>
+<span id="line362">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;B&#111;ld&#32;t&#101;xt</span>
+<span id="line363">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;b&#111;ld&#32;&#96;&#105;mp&#111;rt&#97;nt&#96;;</span>
+<span id="line364">&#32;&#32;*/</span>
+<span id="line365">&#32;&#32;&#111;bj&#46;b&#111;ld&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line366">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line367">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#60;b&#62;$&#123;&#115;&#125;&#60;/b&#62;&#96;;</span>
+<span id="line368">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;**$&#123;&#115;&#125;**&#96;;</span>
+<span id="line369">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;[b]$&#123;&#115;&#125;[/b]&#96;;</span>
+<span id="line370">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line371">&#32;&#32;&#125;</span>
+<span id="line372"></span>
+<span id="line373">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;&#105;t&#97;l&#105;c</span>
+<span id="line374">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;M&#97;k&#101;&#32;t&#101;xt&#32;&#105;t&#97;l&#105;c</span>
+<span id="line375">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;T&#101;xt</span>
+<span id="line376">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;&#73;t&#97;l&#105;z&#101;d&#32;t&#101;xt</span>
+<span id="line377">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;&#105;t&#97;l&#105;c&#32;&#96;c&#111;&#111;l&#96;</span>
+<span id="line378">&#32;&#32;*/</span>
+<span id="line379">&#32;&#32;&#111;bj&#46;&#105;t&#97;l&#105;c&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line380">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line381">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#60;&#105;&#62;$&#123;&#115;&#125;&#60;/&#105;&#62;&#96;;</span>
+<span id="line382">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;_$&#123;&#115;&#125;_&#96;;</span>
+<span id="line383">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;[&#105;]$&#123;&#115;&#125;[/&#105;]&#96;;</span>
+<span id="line384">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line385">&#32;&#32;&#125;</span>
+<span id="line386"></span>
+<span id="line387">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;&#117;nd&#101;rl&#105;n&#101;</span>
+<span id="line388">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;&#85;nd&#101;rl&#105;n&#101;&#32;th&#101;&#32;t&#101;xt</span>
+<span id="line389">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;T&#101;xt</span>
+<span id="line390">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;&#85;nd&#101;rl&#105;n&#101;d&#32;t&#101;xt&#32;&#40;m&#97;rkd&#111;wn&#32;r&#101;t&#117;rn&#115;&#32;n&#111;rm&#97;l&#32;t&#101;xt&#41;</span>
+<span id="line391">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;&#117;nd&#101;rl&#105;n&#101;&#32;&#96;&#117;nd&#101;rl&#105;n&#101;d&#32;t&#101;xt&#96;</span>
+<span id="line392">&#32;&#32;*/</span>
+<span id="line393">&#32;&#32;&#111;bj&#46;&#117;nd&#101;rl&#105;n&#101;&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line394">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line395">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#60;&#117;&#62;$&#123;&#115;&#125;&#60;/&#117;&#62;&#96;;</span>
+<span id="line396">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;$&#123;&#115;&#125;&#96;;</span>
+<span id="line397">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;[&#117;]$&#123;&#115;&#125;[/&#117;]&#96;;</span>
+<span id="line398">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line399">&#32;&#32;&#125;</span>
+<span id="line400"></span>
+<span id="line401">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;l&#105;&#115;t</span>
+<span id="line402">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;Cr&#101;&#97;t&#101;&#32;&#97;&#32;d&#111;tt&#101;d&#32;l&#105;&#115;t&#32;&#111;f&#32;&#105;t&#101;m&#115;</span>
+<span id="line403">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;C&#111;mm&#97;&#32;&#115;&#101;p&#97;r&#97;t&#101;d&#32;l&#105;&#115;t&#32;&#111;f&#32;&#105;t&#101;m&#115;</span>
+<span id="line404">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;L&#105;&#115;t&#32;c&#111;d&#101;</span>
+<span id="line405">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;l&#105;&#115;t&#32;&#96;c&#97;r,b&#105;k&#101;,pl&#97;n&#101;,tr&#117;ck,b&#117;&#115;&#96;</span>
+<span id="line406">&#32;&#32;*/</span>
+<span id="line407">&#32;&#32;&#111;bj&#46;l&#105;&#115;t&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line408">&#32;&#32;&#32;&#32;&#105;f&#32;&#40;typ&#101;&#111;f&#40;&#115;&#41;&#32;==&#32;&#34;&#115;tr&#105;ng&#34;&#41;&#32;&#123;</span>
+<span id="line409">&#32;&#32;&#32;&#32;&#32;&#32;&#115;&#32;=&#32;[&#115;];</span>
+<span id="line410">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line411">&#32;&#32;&#32;&#32;/*&#32;T&#79;D&#79;&#32;&#101;&#115;c&#97;p&#101;dc&#111;mm&#97;&#32;n&#111;t&#32;w&#111;rk&#105;ng&#32;&#97;&#115;&#32;&#105;nt&#101;nd&#101;d&#32;*/</span>
+<span id="line412">&#32;&#32;&#32;&#32;l&#101;t&#32;&#97;&#117;x&#32;=&#32;r&#101;pl&#97;c&#101;&#65;ll&#40;&#115;[0],&#32;&#34;\\\\,&#34;,&#32;&#34;&#69;&#83;C&#65;P&#69;DC&#79;MM&#65;&#34;&#41;&#46;&#115;pl&#105;t&#40;&#34;,&#34;&#41;;</span>
+<span id="line413">&#32;&#32;&#32;&#32;f&#111;r&#32;&#40;l&#101;t&#32;&#105;&#32;&#105;n&#32;&#97;&#117;x&#41;&#32;&#123;</span>
+<span id="line414">&#32;&#32;&#32;&#32;&#32;&#32;&#97;&#117;x[&#105;]&#32;=&#32;r&#101;pl&#97;c&#101;&#65;ll&#40;&#97;&#117;x[&#105;],&#32;&#34;&#69;&#83;C&#65;P&#69;DC&#79;MM&#65;&#34;,&#32;&#34;,&#34;&#41;;</span>
+<span id="line415">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line416"></span>
+<span id="line417">&#32;&#32;&#32;&#32;l&#101;t&#32;&#115;tr&#32;=&#32;&#34;&#34;;</span>
+<span id="line418">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line419">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;:&#32;&#123;</span>
+<span id="line420">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;&#60;&#117;l&#62;\n&#34;;</span>
+<span id="line421">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f&#111;r&#40;l&#101;t&#32;&#105;&#32;&#105;n&#32;&#97;&#117;x&#41;&#32;&#123;</span>
+<span id="line422">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#96;&#60;l&#105;&#62;$&#123;&#97;&#117;x[&#105;]&#125;&#60;/l&#105;&#62;\n&#96;;</span>
+<span id="line423">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line424">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;&#60;/&#117;l&#62;&#34;;</span>
+<span id="line425">&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line426">&#32;&#32;&#32;&#32;&#32;&#32;r&#101;t&#117;rn&#32;&#115;tr;</span>
+<span id="line427"></span>
+<span id="line428">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;:&#32;&#123;</span>
+<span id="line429">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f&#111;r&#40;l&#101;t&#32;&#105;&#32;&#105;n&#32;&#97;&#117;x&#41;&#32;&#123;</span>
+<span id="line430">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#96;-&#32;$&#123;&#97;&#117;x[&#105;]&#125;\n&#96;;</span>
+<span id="line431">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line432">&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line433">&#32;&#32;&#32;&#32;&#32;&#32;r&#101;t&#117;rn&#32;&#115;tr&#46;&#115;&#117;b&#115;tr&#40;0,&#32;&#115;tr&#46;l&#101;ngth-1&#41;;</span>
+<span id="line434"></span>
+<span id="line435">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;:&#32;&#123;</span>
+<span id="line436">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;[l&#105;&#115;t]\n&#34;;</span>
+<span id="line437">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f&#111;r&#40;l&#101;t&#32;&#105;&#32;&#105;n&#32;&#97;&#117;x&#41;&#32;&#123;</span>
+<span id="line438">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#96;[l&#105;]$&#123;&#97;&#117;x[&#105;]&#125;[/l&#105;]\n&#96;;</span>
+<span id="line439">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line440">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;[/l&#105;&#115;t]&#34;;</span>
+<span id="line441">&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line442">&#32;&#32;&#32;&#32;&#32;&#32;r&#101;t&#117;rn&#32;&#115;tr;</span>
+<span id="line443">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line444">&#32;&#32;&#125;</span>
+<span id="line445"></span>
+<span id="line446">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;&#111;l&#105;&#115;t</span>
+<span id="line447">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;Cr&#101;&#97;t&#101;&#32;&#97;&#32;n&#117;m&#101;r&#105;c&#32;l&#105;&#115;t&#32;&#111;f&#32;&#105;t&#101;m&#115;</span>
+<span id="line448">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;C&#111;mm&#97;&#32;&#115;&#101;p&#97;r&#97;t&#101;d&#32;l&#105;&#115;t&#32;&#111;f&#32;&#105;t&#101;m&#115;</span>
+<span id="line449">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;L&#105;&#115;t&#32;c&#111;d&#101;</span>
+<span id="line450">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;&#111;l&#105;&#115;t&#32;&#96;Pr&#101;&#115;&#115;&#32;th&#101;&#32;b&#117;tt&#111;n,W&#97;&#105;t&#32;5&#32;&#115;&#101;c&#111;nd&#115;,Pr&#101;&#115;&#115;&#32;th&#101;&#32;b&#117;tt&#111;n&#32;&#97;g&#97;&#105;n,d&#111;n&#101;&#96;</span>
+<span id="line451">&#32;&#32;*/</span>
+<span id="line452">&#32;&#32;&#111;bj&#46;&#111;l&#105;&#115;t&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line453">&#32;&#32;&#32;&#32;&#105;f&#32;&#40;typ&#101;&#111;f&#40;&#115;&#41;&#32;==&#32;&#34;&#115;tr&#105;ng&#34;&#41;&#32;&#123;</span>
+<span id="line454">&#32;&#32;&#32;&#32;&#32;&#32;&#115;&#32;=&#32;[&#115;];</span>
+<span id="line455">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line456"></span>
+<span id="line457">&#32;&#32;&#32;&#32;l&#101;t&#32;&#97;&#117;x&#32;=&#32;r&#101;pl&#97;c&#101;&#65;ll&#40;&#115;[0],&#32;&#34;\\\\,&#34;,&#32;&#34;&#69;&#83;C&#65;P&#69;DC&#79;MM&#65;&#34;&#41;&#46;&#115;pl&#105;t&#40;&#34;,&#34;&#41;;</span>
+<span id="line458">&#32;&#32;&#32;&#32;f&#111;r&#32;&#40;l&#101;t&#32;&#105;&#32;&#105;n&#32;&#97;&#117;x&#41;&#32;&#123;</span>
+<span id="line459">&#32;&#32;&#32;&#32;&#32;&#32;&#97;&#117;x[&#105;]&#32;=&#32;r&#101;pl&#97;c&#101;&#65;ll&#40;&#97;&#117;x[&#105;],&#32;&#34;&#69;&#83;C&#65;P&#69;DC&#79;MM&#65;&#34;,&#32;&#34;,&#34;&#41;;</span>
+<span id="line460">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line461"></span>
+<span id="line462">&#32;&#32;&#32;&#32;l&#101;t&#32;&#115;tr&#32;=&#32;&#34;&#34;;</span>
+<span id="line463">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line464">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;:&#32;&#123;</span>
+<span id="line465">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;&#60;&#111;l&#62;\n&#34;;</span>
+<span id="line466">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f&#111;r&#40;l&#101;t&#32;&#105;&#32;&#105;n&#32;&#97;&#117;x&#41;&#32;&#123;</span>
+<span id="line467">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#96;&#60;l&#105;&#62;$&#123;&#97;&#117;x[&#105;]&#125;&#60;/l&#105;&#62;\n&#96;;</span>
+<span id="line468">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line469">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;&#60;/&#111;l&#62;&#34;;</span>
+<span id="line470">&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line471">&#32;&#32;&#32;&#32;&#32;&#32;r&#101;t&#117;rn&#32;&#115;tr;</span>
+<span id="line472"></span>
+<span id="line473">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;:&#32;&#123;</span>
+<span id="line474">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f&#111;r&#40;l&#101;t&#32;&#105;&#32;=&#32;0;&#32;&#105;&#32;&#60;&#32;&#97;&#117;x&#46;l&#101;ngth;&#32;++&#105;&#41;&#32;&#123;</span>
+<span id="line475">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#96;$&#123;+&#105;&#32;+&#32;1&#125;&#46;&#32;$&#123;&#97;&#117;x[&#105;]&#125;\n&#96;;</span>
+<span id="line476">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line477">&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line478">&#32;&#32;&#32;&#32;&#32;&#32;r&#101;t&#117;rn&#32;&#115;tr&#46;&#115;&#117;b&#115;tr&#40;0,&#32;&#115;tr&#46;l&#101;ngth-1&#41;;</span>
+<span id="line479"></span>
+<span id="line480">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;:&#32;&#123;</span>
+<span id="line481">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;[l&#105;&#115;t]\n&#34;;</span>
+<span id="line482">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f&#111;r&#40;l&#101;t&#32;&#105;&#32;&#105;n&#32;&#97;&#117;x&#41;&#32;&#123;</span>
+<span id="line483">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#96;[l&#105;]$&#123;&#97;&#117;x[&#105;]&#125;[/l&#105;]\n&#96;;</span>
+<span id="line484">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line485">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;[/l&#105;&#115;t]&#34;;</span>
+<span id="line486">&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line487">&#32;&#32;&#32;&#32;&#32;&#32;r&#101;t&#117;rn&#32;&#115;tr;</span>
+<span id="line488">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line489">&#32;&#32;&#125;</span>
+<span id="line490"></span>
+<span id="line491">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;hr</span>
+<span id="line492">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;&#65;dd&#32;&#97;&#32;h&#111;r&#105;z&#111;nt&#97;l&#32;l&#105;n&#101;&#32;&#115;&#101;p&#97;r&#97;t&#111;r</span>
+<span id="line493">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#40;&#41;</span>
+<span id="line494">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;H&#111;r&#105;z&#111;nt&#97;l&#32;&#115;&#101;p&#97;r&#97;t&#111;r&#32;c&#111;d&#101;</span>
+<span id="line495">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;hr&#32;&#96;&#96;</span>
+<span id="line496">&#32;&#32;*/</span>
+<span id="line497">&#32;&#32;&#111;bj&#46;hr&#32;=&#32;&#40;&#41;&#32;=&#62;&#32;&#123;</span>
+<span id="line498">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line499">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#60;hr&#62;&#96;;</span>
+<span id="line500">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;\n---&#32;&#32;\n&#96;;</span>
+<span id="line501">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;\n[hr]\n&#96;;</span>
+<span id="line502">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line503">&#32;&#32;&#125;</span>
+<span id="line504"></span>
+<span id="line505">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;q&#117;&#111;t&#101;</span>
+<span id="line506">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;Cr&#101;&#97;t&#101;&#32;&#97;&#32;q&#117;&#111;t&#101;d&#32;bl&#111;ck</span>
+<span id="line507">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;T&#101;xt&#32;bl&#111;ck</span>
+<span id="line508">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;Q&#117;&#111;t&#101;d&#32;bl&#111;ck</span>
+<span id="line509">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;q&#117;&#111;t&#101;&#32;&#96;&#34;Th&#105;&#115;&#32;t&#101;xt&#32;&#105;&#115;&#32;b&#101;&#105;ng&#32;q&#117;&#111;t&#101;d&#34;&#96;</span>
+<span id="line510">&#32;&#32;*/</span>
+<span id="line511">&#32;&#32;&#111;bj&#46;q&#117;&#111;t&#101;&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line512">&#32;&#32;&#32;&#32;l&#101;t&#32;&#97;&#117;x&#32;=&#32;&#34;&#34;;</span>
+<span id="line513">&#32;&#32;&#32;&#32;&#105;f&#32;&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#32;==&#32;&#34;m&#97;rkd&#111;wn&#34;&#41;&#32;&#123;</span>
+<span id="line514">&#32;&#32;&#32;&#32;&#32;&#32;&#115;&#32;=&#32;&#115;[0]&#46;&#115;pl&#105;t&#40;&#34;\n&#34;&#41;;</span>
+<span id="line515">&#32;&#32;&#32;&#32;&#32;&#32;f&#111;r&#32;&#40;l&#101;t&#32;&#105;&#32;&#105;n&#32;&#115;&#41;&#32;&#123;</span>
+<span id="line516">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#97;&#117;x&#32;+=&#32;&#34;&#62;&#32;&#34;&#32;+&#32;&#115;[&#105;]&#32;+&#32;&#34;\n&#34;;</span>
+<span id="line517">&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line518">&#32;&#32;&#32;&#32;&#32;&#32;&#97;&#117;x&#46;&#115;&#117;b&#115;tr&#40;0,&#32;&#97;&#117;x&#46;l&#101;ngth&#32;-&#32;1&#41;;</span>
+<span id="line519">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line520"></span>
+<span id="line521">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line522">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#60;bl&#111;ckq&#117;&#111;t&#101;&#62;$&#123;&#115;&#125;&#60;/bl&#111;ckq&#117;&#111;t&#101;&#62;&#96;;</span>
+<span id="line523">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#97;&#117;x;</span>
+<span id="line524">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;[q&#117;&#111;t&#101;]$&#123;&#115;&#125;[/q&#117;&#111;t&#101;]&#96;;</span>
+<span id="line525">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line526">&#32;&#32;&#125;</span>
+<span id="line527"></span>
+<span id="line528">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;t&#97;bl&#101;</span>
+<span id="line529">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;Cr&#101;&#97;t&#101;&#32;&#97;&#32;t&#97;bl&#101;</span>
+<span id="line530">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;|&#32;&#115;&#101;p&#97;r&#97;t&#101;d&#32;l&#105;&#115;t</span>
+<span id="line531">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;T&#97;bl&#101;&#32;c&#111;d&#101;</span>
+<span id="line532">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;t&#97;bl&#101;&#32;&#96;&#105;t&#101;m&#32;|&#32;pr&#105;c&#101;</span>
+<span id="line533">b&#97;g&#32;|&#32;12€</span>
+<span id="line534">&#115;h&#111;&#101;&#115;&#32;|&#32;3€&#96;</span>
+<span id="line535">&#32;&#32;*/</span>
+<span id="line536">&#32;&#32;&#111;bj&#46;t&#97;bl&#101;&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line537">&#32;&#32;&#32;&#32;&#115;&#32;=&#32;&#115;[0]&#46;&#115;pl&#105;t&#40;&#34;\n&#34;&#41;;</span>
+<span id="line538">&#32;&#32;&#32;&#32;l&#101;t&#32;&#97;&#117;x&#32;=&#32;[];</span>
+<span id="line539">&#32;&#32;&#32;&#32;f&#111;r&#32;&#40;l&#101;t&#32;&#105;&#32;=&#32;0;&#32;&#105;&#32;&#60;&#32;&#115;&#46;l&#101;ngth;&#32;++&#105;&#41;&#32;&#123;</span>
+<span id="line540">&#32;&#32;&#32;&#32;&#32;&#32;&#97;&#117;x&#46;p&#117;&#115;h&#40;&#115;[&#105;]&#46;&#115;pl&#105;t&#40;&#34;&#32;|&#32;&#34;&#41;&#41;;</span>
+<span id="line541">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line542">&#32;&#32;&#32;&#32;l&#101;t&#32;&#115;tr&#32;=&#32;&#34;&#34;;</span>
+<span id="line543">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line544">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;:&#32;&#123;</span>
+<span id="line545">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;&#60;t&#97;bl&#101;&#32;&#115;tyl&#101;=&#39;b&#111;rd&#101;r:1px&#32;&#115;&#111;l&#105;d&#32;#555&#39;&#62;\n&#34;;</span>
+<span id="line546">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f&#111;r&#32;&#40;l&#101;t&#32;&#105;&#32;=&#32;0;&#32;&#105;&#32;&#60;&#32;&#97;&#117;x&#46;l&#101;ngth;&#32;++&#105;&#41;&#32;&#123;</span>
+<span id="line547">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#105;f&#32;&#40;&#105;&#32;==&#32;0&#41;&#32;&#123;</span>
+<span id="line548">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;&#60;tr&#62;&#34;;</span>
+<span id="line549">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f&#111;r&#32;&#40;l&#101;t&#32;j&#32;&#105;n&#32;&#97;&#117;x[&#105;]&#41;&#32;&#123;</span>
+<span id="line550">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#96;&#60;th&#62;$&#123;&#97;&#117;x[&#105;][j]&#125;&#60;/th&#62;&#96;;</span>
+<span id="line551">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line552">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;&#60;/tr&#62;\n&#34;;</span>
+<span id="line553">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#125;&#32;&#101;l&#115;&#101;&#32;&#123;</span>
+<span id="line554">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;&#60;tr&#62;&#34;;</span>
+<span id="line555">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f&#111;r&#32;&#40;l&#101;t&#32;j&#32;&#105;n&#32;&#97;&#117;x[&#105;]&#41;&#32;&#123;</span>
+<span id="line556">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#96;&#60;td&#62;$&#123;&#97;&#117;x[&#105;][j]&#125;&#60;/td&#62;&#96;;</span>
+<span id="line557">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line558">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;&#60;/tr&#62;\n&#34;;</span>
+<span id="line559">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line560">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line561">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;&#60;/t&#97;bl&#101;&#62;&#34;;</span>
+<span id="line562">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;r&#101;t&#117;rn&#32;&#115;tr;</span>
+<span id="line563">&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line564"></span>
+<span id="line565">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;:&#32;&#123;</span>
+<span id="line566">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f&#111;r&#32;&#40;l&#101;t&#32;&#105;&#32;=&#32;0;&#32;&#105;&#32;&#60;&#32;&#97;&#117;x&#46;l&#101;ngth;&#32;++&#105;&#41;&#32;&#123;</span>
+<span id="line567">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f&#111;r&#32;&#40;l&#101;t&#32;j&#32;&#105;n&#32;&#97;&#117;x[&#105;]&#41;&#32;&#123;</span>
+<span id="line568">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#96;|&#32;$&#123;&#97;&#117;x[&#105;][j]&#125;&#32;&#96;;</span>
+<span id="line569">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line570">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;|&#32;\n&#34;;</span>
+<span id="line571"></span>
+<span id="line572">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#105;f&#32;&#40;&#105;&#32;==&#32;0&#41;&#32;&#123;</span>
+<span id="line573">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f&#111;r&#32;&#40;l&#101;t&#32;j&#32;&#105;n&#32;&#97;&#117;x[&#105;]&#41;&#32;&#123;</span>
+<span id="line574">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#96;|&#32;---&#32;&#96;;</span>
+<span id="line575">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line576">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;|\n&#34;;</span>
+<span id="line577">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line578">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line579">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;r&#101;t&#117;rn&#32;&#115;tr;</span>
+<span id="line580">&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line581"></span>
+<span id="line582">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;:&#32;&#123;</span>
+<span id="line583">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;[t&#97;bl&#101;]\n&#34;;</span>
+<span id="line584">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f&#111;r&#32;&#40;l&#101;t&#32;&#105;&#32;=&#32;0;&#32;&#105;&#32;&#60;&#32;&#97;&#117;x&#46;l&#101;ngth;&#32;++&#105;&#41;&#32;&#123;</span>
+<span id="line585">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#105;f&#32;&#40;&#105;&#32;==&#32;0&#41;&#32;&#123;</span>
+<span id="line586">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;[tr]&#34;;</span>
+<span id="line587">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f&#111;r&#32;&#40;l&#101;t&#32;j&#32;&#105;n&#32;&#97;&#117;x[&#105;]&#41;&#32;&#123;</span>
+<span id="line588">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#115;tr&#32;+=&#32;&#96;[th]$&#123;&#97;&#117;x[&#105;][j]&#125;[/th]&#96;;</span>
+<span id="line589">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#96;[td]$&#123;&#97;&#117;x[&#105;][j]&#125;[/td]&#96;;</span>
+<span id="line590">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line591">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;[/tr]\n&#34;;</span>
+<span id="line592">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#125;&#32;&#101;l&#115;&#101;&#32;&#123;</span>
+<span id="line593">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;[tr]&#34;;</span>
+<span id="line594">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f&#111;r&#32;&#40;l&#101;t&#32;j&#32;&#105;n&#32;&#97;&#117;x[&#105;]&#41;&#32;&#123;</span>
+<span id="line595">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#96;[td]$&#123;&#97;&#117;x[&#105;][j]&#125;[/td]&#96;;</span>
+<span id="line596">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line597">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;[/tr]\n&#34;;</span>
+<span id="line598">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line599">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line600">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#115;tr&#32;+=&#32;&#34;[/t&#97;bl&#101;]&#34;;</span>
+<span id="line601">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;r&#101;t&#117;rn&#32;&#115;tr;</span>
+<span id="line602">&#32;&#32;&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line603">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line604">&#32;&#32;&#125;</span>
+<span id="line605"></span>
+<span id="line606">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;&#115;tyl&#101;_t&#97;bl&#101;&#115;</span>
+<span id="line607">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;&#65;dd&#32;t&#97;bl&#101;&#115;&#32;c&#115;&#115;&#32;&#105;f&#32;g&#101;n&#101;r&#97;t&#105;ng&#32;&#97;&#32;html&#32;d&#111;c&#117;m&#101;nt</span>
+<span id="line608">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#40;&#41;</span>
+<span id="line609">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;C&#83;&#83;&#32;&#115;tyl&#101;&#32;c&#111;d&#101;</span>
+<span id="line610">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;&#115;tyl&#101;_t&#97;bl&#101;&#115;&#32;&#96;&#96;</span>
+<span id="line611">&#32;&#32;*/</span>
+<span id="line612">&#32;&#32;&#111;bj&#46;&#115;tyl&#101;_t&#97;bl&#101;&#115;&#32;=&#32;&#40;&#41;&#32;=&#62;&#32;&#123;</span>
+<span id="line613">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line614">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#60;&#115;tyl&#101;&#62;</span>
+<span id="line615">t&#97;bl&#101;&#32;&#123;</span>
+<span id="line616">&#32;&#32;m&#97;rg&#105;n-b&#111;tt&#111;m:&#32;24px;</span>
+<span id="line617">&#32;&#32;b&#111;rd&#101;r-&#115;p&#97;c&#105;ng:&#32;0;</span>
+<span id="line618">&#32;&#32;b&#111;rd&#101;r-b&#111;tt&#111;m:&#32;2px&#32;&#115;&#111;l&#105;d&#32;bl&#97;ck;</span>
+<span id="line619">&#32;&#32;b&#111;rd&#101;r-t&#111;p:&#32;2px&#32;&#115;&#111;l&#105;d&#32;bl&#97;ck;</span>
+<span id="line620">&#125;&#32;t&#97;bl&#101;&#32;th&#32;&#123;</span>
+<span id="line621">&#32;&#32;p&#97;dd&#105;ng:&#32;3px&#32;10px;</span>
+<span id="line622">&#32;&#32;b&#97;ckgr&#111;&#117;nd-c&#111;l&#111;r:&#32;#ddd;</span>
+<span id="line623">&#32;&#32;b&#111;rd&#101;r-t&#111;p:&#32;n&#111;n&#101;;</span>
+<span id="line624">&#32;&#32;b&#111;rd&#101;r-l&#101;ft:&#32;n&#111;n&#101;;</span>
+<span id="line625">&#32;&#32;b&#111;rd&#101;r-r&#105;ght:&#32;n&#111;n&#101;;</span>
+<span id="line626">&#32;&#32;b&#111;rd&#101;r-b&#111;tt&#111;m:&#32;1px&#32;&#115;&#111;l&#105;d&#32;bl&#97;ck;</span>
+<span id="line627">&#125;&#32;t&#97;bl&#101;&#32;td&#32;&#123;</span>
+<span id="line628">&#32;&#32;p&#97;dd&#105;ng:&#32;3px&#32;10px;</span>
+<span id="line629">&#32;&#32;b&#111;rd&#101;r-t&#111;p:&#32;n&#111;n&#101;;</span>
+<span id="line630">&#32;&#32;b&#111;rd&#101;r-l&#101;ft:&#32;1px&#32;&#115;&#111;l&#105;d&#32;bl&#97;ck;</span>
+<span id="line631">&#32;&#32;b&#111;rd&#101;r-b&#111;tt&#111;m:&#32;n&#111;n&#101;;</span>
+<span id="line632">&#32;&#32;b&#111;rd&#101;r-r&#105;ght:&#32;1px&#32;&#115;&#111;l&#105;d&#32;bl&#97;ck;</span>
+<span id="line633">&#125;</span>
+<span id="line634">&#60;/&#115;tyl&#101;&#62;&#96;;</span>
+<span id="line635">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#34;R&#69;M&#79;V&#69;TH&#73;&#83;L&#73;N&#69;&#34;;</span>
+<span id="line636">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#34;R&#69;M&#79;V&#69;TH&#73;&#83;L&#73;N&#69;&#34;;</span>
+<span id="line637">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line638">&#32;&#32;&#125;</span>
+<span id="line639"></span>
+<span id="line640">&#32;&#32;/*&#32;m&#101;th&#111;d&#32;-&#62;&#32;&#111;bj&#46;&#115;tyl&#101;_d&#101;f&#97;&#117;lt</span>
+<span id="line641">&#32;&#32;*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;&#65;dd&#32;d&#111;c&#117;m&#101;nt&#32;c&#115;&#115;&#32;&#105;f&#32;g&#101;n&#101;r&#97;t&#105;ng&#32;&#97;&#32;html&#32;d&#111;c&#117;m&#101;nt</span>
+<span id="line642">&#32;&#32;*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#40;&#41;</span>
+<span id="line643">&#32;&#32;*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;C&#83;&#83;&#32;&#115;tyl&#101;&#32;c&#111;d&#101;</span>
+<span id="line644">&#32;&#32;*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;&#115;tyl&#101;_d&#101;f&#97;&#117;lt&#96;&#96;</span>
+<span id="line645">&#32;&#32;*/</span>
+<span id="line646">&#32;&#32;&#111;bj&#46;&#115;tyl&#101;_d&#101;f&#97;&#117;lt&#32;=&#32;&#40;&#41;&#32;=&#62;&#32;&#123;</span>
+<span id="line647">&#32;&#32;&#32;&#32;&#115;w&#105;tch&#40;&#111;bj&#46;d&#111;c&#117;m&#101;ntTyp&#101;&#41;&#32;&#123;</span>
+<span id="line648">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;html&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#96;&#60;&#115;tyl&#101;&#62;</span>
+<span id="line649">html&#32;&#123;</span>
+<span id="line650">&#32;&#32;m&#97;rg&#105;n:&#32;0;</span>
+<span id="line651">&#32;&#32;w&#105;dth:&#32;100&#37;;</span>
+<span id="line652">&#32;&#32;h&#101;&#105;ght:&#32;100&#37;;</span>
+<span id="line653">&#32;&#32;t&#101;xt-&#97;l&#105;gn:&#32;m&#105;ddl&#101;;</span>
+<span id="line654">&#32;&#32;t&#101;xt-&#115;&#105;z&#101;-&#97;dj&#117;&#115;t:&#32;n&#111;n&#101;;&#32;/*&#32;F&#105;x&#32;&#65;ndr&#111;&#105;d&#32;B&#105;g&#32;T&#101;xt&#32;*/</span>
+<span id="line655">&#32;&#32;t&#111;&#117;ch-&#97;ct&#105;&#111;n:&#32;m&#97;n&#105;p&#117;l&#97;t&#105;&#111;n;&#32;/*&#32;D&#105;&#115;&#97;bl&#101;&#32;d&#111;&#117;bl&#101;&#32;t&#97;p&#32;z&#111;&#111;m&#32;&#111;n&#32;t&#111;&#117;ch&#32;d&#101;v&#105;c&#101;&#115;&#32;t&#111;&#32;&#97;ll&#111;w&#32;f&#97;&#115;t&#32;t&#111;&#117;ch&#32;&#97;ct&#105;&#111;n&#115;&#32;*/</span>
+<span id="line656">&#125;&#32;b&#111;dy&#32;&#123;</span>
+<span id="line657">&#32;&#32;p&#97;dd&#105;ng-b&#111;tt&#111;m:&#32;16px;&#32;/*&#32;&#83;&#111;m&#101;&#32;&#65;ndr&#111;&#105;d&#32;&#115;cr&#101;&#101;n&#115;&#32;c&#111;v&#101;r&#32;b&#111;tt&#111;m&#32;v&#105;&#101;wp&#111;rt&#32;*/</span>
+<span id="line658">&#32;&#32;b&#97;ckgr&#111;&#117;nd-c&#111;l&#111;r:&#32;#&#101;&#101;&#101;;</span>
+<span id="line659">&#32;&#32;c&#111;l&#111;r:&#32;#555;</span>
+<span id="line660">&#125;&#32;c&#111;d&#101;&#32;&#123;</span>
+<span id="line661">&#32;&#32;d&#105;&#115;pl&#97;y:&#32;bl&#111;ck;</span>
+<span id="line662">&#32;&#32;c&#111;l&#111;r:&#32;#ccc;</span>
+<span id="line663">&#32;&#32;f&#111;nt-f&#97;m&#105;ly:&#32;&#34;C&#111;&#117;r&#105;&#101;r&#32;N&#101;w&#34;,&#32;m&#111;n&#111;&#115;p&#97;c&#101;;</span>
+<span id="line664">&#32;&#32;wh&#105;t&#101;-&#115;p&#97;c&#101;:&#32;pr&#101;;</span>
+<span id="line665">&#32;&#32;&#111;v&#101;rfl&#111;w:&#32;&#97;&#117;t&#111;;</span>
+<span id="line666">&#32;&#32;m&#97;rg&#105;n-b&#111;tt&#111;m:&#32;8px;</span>
+<span id="line667">&#32;&#32;p&#97;dd&#105;ng:&#32;10px;</span>
+<span id="line668">&#32;&#32;&#111;p&#97;c&#105;ty:&#32;0&#46;9;</span>
+<span id="line669">&#32;&#32;c&#111;l&#111;r:&#32;#f82;</span>
+<span id="line670">&#32;&#32;b&#97;ckgr&#111;&#117;nd-c&#111;l&#111;r:&#32;#222;</span>
+<span id="line671">&#32;&#32;f&#111;nt-w&#101;&#105;ght:&#32;600;</span>
+<span id="line672">&#32;&#32;-w&#101;bk&#105;t-f&#111;nt-&#115;m&#111;&#111;th&#105;ng:&#32;&#97;nt&#105;&#97;l&#105;&#97;&#115;&#101;d;</span>
+<span id="line673">&#32;&#32;-m&#111;z-&#111;&#115;x-f&#111;nt-&#115;m&#111;&#111;th&#105;ng:&#32;gr&#97;y&#115;c&#97;l&#101;;</span>
+<span id="line674">&#32;&#32;b&#111;rd&#101;r:&#32;1px&#32;&#115;&#111;l&#105;d&#32;bl&#97;ck;</span>
+<span id="line675">&#125;&#32;bl&#111;ckq&#117;&#111;t&#101;&#32;&#123;</span>
+<span id="line676">&#32;&#32;b&#97;ckgr&#111;&#117;nd-c&#111;l&#111;r:&#32;#&#101;&#101;&#101;;</span>
+<span id="line677">&#32;&#32;c&#111;l&#111;r:&#32;#333;</span>
+<span id="line678">&#32;&#32;b&#111;rd&#101;r-t&#111;p:&#32;2px&#32;&#115;&#111;l&#105;d&#32;bl&#97;ck;</span>
+<span id="line679">&#32;&#32;p&#97;dd&#105;ng:&#32;4px;</span>
+<span id="line680">&#125;&#32;t&#97;bl&#101;&#32;&#123;</span>
+<span id="line681">&#32;&#32;m&#97;rg&#105;n-l&#101;ft:&#32;4px;</span>
+<span id="line682">&#32;&#32;b&#111;rd&#101;r-&#115;p&#97;c&#105;ng:&#32;0;</span>
+<span id="line683">&#32;&#32;b&#111;rd&#101;r-b&#111;tt&#111;m:&#32;2px&#32;&#115;&#111;l&#105;d&#32;bl&#97;ck;</span>
+<span id="line684">&#32;&#32;b&#111;rd&#101;r-t&#111;p:&#32;2px&#32;&#115;&#111;l&#105;d&#32;bl&#97;ck;</span>
+<span id="line685">&#32;&#32;b&#111;rd&#101;r-r&#97;d&#105;&#117;&#115;:&#32;2px;</span>
+<span id="line686">&#125;&#32;t&#97;bl&#101;&#32;th&#32;&#123;</span>
+<span id="line687">&#32;&#32;p&#97;dd&#105;ng:&#32;3px&#32;10px;</span>
+<span id="line688">&#32;&#32;b&#97;ckgr&#111;&#117;nd-c&#111;l&#111;r:&#32;#ddd;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;b&#111;rd&#101;r-t&#111;p:&#32;n&#111;n&#101;;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;b&#111;rd&#101;r-l&#101;ft:&#32;n&#111;n&#101;;</span>
+<span id="line689">&#32;&#32;b&#111;rd&#101;r-r&#105;ght:&#32;n&#111;n&#101;;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;b&#111;rd&#101;r-b&#111;tt&#111;m:&#32;1px&#32;&#115;&#111;l&#105;d&#32;bl&#97;ck;</span>
+<span id="line690">&#125;&#32;p&#32;&#123;</span>
+<span id="line691">&#32;&#32;m&#97;rg&#105;n:&#32;0;</span>
+<span id="line692">&#125;&#32;h5&#32;&#123;</span>
+<span id="line693">&#32;&#32;m&#97;rg&#105;n:&#32;18px&#32;0&#32;-14px&#32;0;</span>
+<span id="line694">&#125;&#32;</span>
+<span id="line695"></span>
+<span id="line696">&#60;/&#115;tyl&#101;&#62;&#96;;</span>
+<span id="line697">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;m&#97;rkd&#111;wn&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#34;R&#69;M&#79;V&#69;TH&#73;&#83;L&#73;N&#69;&#34;;</span>
+<span id="line698">&#32;&#32;&#32;&#32;&#32;&#32;c&#97;&#115;&#101;&#32;&#34;bbc&#111;d&#101;&#34;&#32;:&#32;r&#101;t&#117;rn&#32;&#34;R&#69;M&#79;V&#69;TH&#73;&#83;L&#73;N&#69;&#34;;</span>
+<span id="line699">&#32;&#32;&#32;&#32;&#125;</span>
+<span id="line700">&#32;&#32;&#125;</span>
+<span id="line701"></span>
+<span id="line702">&#125;</span>
+<span id="line703"></span>
+<span id="line704">/*&#32;f&#117;nct&#105;&#111;n&#32;-&#62;&#32;r&#101;pl&#97;c&#101;&#65;ll</span>
+<span id="line705">*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;R&#101;pl&#97;c&#101;&#32;&#97;ll&#32;&#111;c&#117;rr&#101;nc&#101;&#115;&#32;&#111;f&#32;&#97;&#32;&#115;tr&#105;ng&#32;fr&#111;m&#32;th&#101;&#32;t&#101;xt</span>
+<span id="line706">*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;tr&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;T&#101;xt&#32;t&#111;&#32;r&#101;pl&#97;c&#101;&#32;f&#105;nd&#105;ng&#115;&#32;fr&#111;m</span>
+<span id="line707">*&#32;p&#97;r&#97;m&#32;-&#62;&#32;p&#97;tt&#101;rn&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;T&#101;xt&#32;&#40;c&#111;v&#101;rt&#101;d&#32;t&#111;&#32;r&#101;g&#117;l&#97;r&#32;&#101;xpr&#101;&#115;&#115;&#105;&#111;n&#41;&#32;t&#111;&#32;r&#101;pl&#97;c&#101;</span>
+<span id="line708">*&#32;p&#97;r&#97;m&#32;-&#62;&#32;n&#101;w&#83;tr&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;N&#101;w&#32;t&#101;xt&#32;t&#111;&#32;r&#101;pl&#97;c&#101;d&#32;f&#105;nd&#105;ng&#115;&#32;f&#111;r</span>
+<span id="line709">*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;T&#101;xt&#32;w&#105;th&#32;&#97;ll&#32;&#111;c&#117;rr&#101;nc&#101;&#115;&#32;r&#101;pl&#97;c&#101;d</span>
+<span id="line710">*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;r&#101;pl&#97;c&#101;&#65;ll&#40;&#34;h&#101;ll&#111;&#32;M&#97;n&#111;l&#111;,&#32;h&#101;ll&#111;&#34;,&#32;&#34;h&#101;ll&#111;&#34;,&#32;&#34;by&#101;&#34;&#41;;</span>
+<span id="line711">*/</span>
+<span id="line712">c&#111;n&#115;t&#32;r&#101;pl&#97;c&#101;&#65;ll&#32;=&#32;&#40;&#115;tr,&#32;p&#97;tt&#101;rn,&#32;n&#101;w&#83;tr&#41;&#32;=&#62;&#32;&#123;</span>
+<span id="line713">&#32;&#32;c&#111;n&#115;t&#32;r&#101;g&#32;=&#32;n&#101;w&#32;R&#101;g&#69;xp&#40;p&#97;tt&#101;rn,&#32;&#34;g&#34;&#41;;</span>
+<span id="line714">&#32;&#32;wh&#105;l&#101;&#32;&#40;r&#101;g&#46;t&#101;&#115;t&#40;&#115;tr&#41;&#41;&#32;&#123;</span>
+<span id="line715">&#32;&#32;&#32;&#32;&#115;tr&#32;=&#32;&#115;tr&#46;r&#101;pl&#97;c&#101;&#40;r&#101;g,&#32;n&#101;w&#83;tr&#41;;</span>
+<span id="line716">&#32;&#32;&#125;</span>
+<span id="line717">&#32;&#32;r&#101;t&#117;rn&#32;&#115;tr;</span>
+<span id="line718">&#125;</span>
+<span id="line719"></span>
+<span id="line720">/*&#32;f&#117;nct&#105;&#111;n&#32;-&#62;&#32;html&#69;nt&#105;t&#105;&#101;&#115;</span>
+<span id="line721">*&#32;&#115;&#117;mm&#97;ry&#32;-&#62;&#32;C&#111;nv&#101;rt&#32;&#97;ll&#32;ch&#97;r&#97;ct&#101;r&#115;&#32;t&#111;&#32;HTML&#32;&#101;nt&#105;t&#105;&#101;&#115;&#32;t&#111;&#32;&#97;v&#111;&#105;d&#32;t&#101;xt&#32;b&#101;&#105;ng&#32;&#105;nt&#101;rpr&#101;t&#97;t&#101;d&#32;&#97;&#115;&#32;c&#111;d&#101;</span>
+<span id="line722">*&#32;p&#97;r&#97;m&#32;-&#62;&#32;&#115;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;C&#111;d&#101;&#32;t&#111;&#32;c&#111;v&#101;rt&#32;t&#111;&#32;HTML&#32;&#101;nt&#105;t&#105;&#101;&#115;</span>
+<span id="line723">*&#32;r&#101;t&#117;rn&#32;-&#62;&#32;&#97;&#32;-&#62;&#32;&#83;tr&#105;ng&#32;-&#62;&#32;HTML&#32;&#101;nt&#105;t&#105;&#101;&#115;</span>
+<span id="line724">*&#32;&#101;x&#97;mpl&#101;&#32;-&#62;&#32;html&#69;nt&#105;t&#105;&#101;&#115;&#40;&#34;My&#32;f&#97;v&#111;&#117;r&#105;t&#101;&#32;t&#97;g&#32;&#105;&#115;&#32;&#60;&#105;fr&#97;m&#101;&#32;&#115;rc=&#39;j&#97;v&#97;&#115;cr&#105;pt:&#97;l&#101;rt&#40;1337&#41;&#39;&#62;&#60;/&#105;fr&#97;m&#101;&#62;&#34;&#41;;</span>
+<span id="line725">*/</span>
+<span id="line726">c&#111;n&#115;t&#32;html&#69;nt&#105;t&#105;&#101;&#115;&#32;=&#32;&#115;&#32;=&#62;&#32;&#123;</span>
+<span id="line727">&#32;&#32;c&#111;n&#115;t&#32;r&#32;=&#32;&#34;r&#101;pl&#97;c&#101;&#34;;</span>
+<span id="line728">&#32;&#32;c&#111;n&#115;t&#32;&#97;&#32;=&#32;&#115;[r]&#40;/&#32;/g,&#34;&#32;&#34;&#41;[r]&#40;/&#33;/g,&#34;&#33;&#34;&#41;[r]&#40;/&#34;/g,&#34;&#34;&#34;&#41;[r]&#40;/&#37;/g,&#34;&#37;&#34;&#41;[r]&#40;/&#39;/g,&#34;&#39;&#34;&#41;[r]&#40;/\&#40;/g,&#34;&#40;&#34;&#41;[r]&#40;/\&#41;/g,&#34;&#41;&#34;&#41;[r]&#40;/&#60;/g,&#34;&#60;&#34;&#41;[r]&#40;/&#62;/g,&#34;&#62;&#34;&#41;[r]&#40;/&#96;/g,&#34;&#96;&#34;&#41;[r]&#40;/&#97;/g,&#34;&#97;&#34;&#41;[r]&#40;/&#65;/g,&#34;&#65;&#34;&#41;[r]&#40;/&#101;/g,&#34;&#101;&#34;&#41;[r]&#40;/&#69;/g,&#34;&#69;&#34;&#41;[r]&#40;/&#105;/g,&#34;&#105;&#34;&#41;[r]&#40;/&#73;/g,&#34;&#73;&#34;&#41;[r]&#40;/&#111;/g,&#34;&#111;&#34;&#41;[r]&#40;/&#79;/g,&#34;&#79;&#34;&#41;[r]&#40;/&#117;/g,&#34;&#117;&#34;&#41;[r]&#40;/&#85;/g,&#34;&#85;&#34;&#41;[r]&#40;/&#123;/g,&#34;&#123;&#34;&#41;[r]&#40;/&#125;/g,&#34;&#125;&#34;&#41;[r]&#40;/&#8216;/g,&#34;&#8216;&#34;&#41;[r]&#40;/&#8217/g,&#34;&#8217&#34;&#41;[r]&#40;/&#8218;/g,&#34;&#8218;&#34;&#41;[r]&#40;/&#8220;/g,&#34;&#8220;&#34;&#41;[r]&#40;/&#8221;/g,&#34;&#8221;&#34;&#41;[r]&#40;/&#8222;/g,&#34;&#8222;&#34;&#41;[r]&#40;/&#8242;/g,&#34;&#8242;&#34;&#41;[r]&#40;/&#8244;/g,&#34;&#8244;&#34;&#41;[r]&#40;/&#8249;/g,&#34;&#8249;&#34;&#41;[r]&#40;/&#8250;/g,&#34;&#8250;&#34;&#41;[r]&#40;/&#115;/g,&#34;&#115;&#34;&#41;[r]&#40;/&#83;/g,&#34;&#83;&#34;&#41;[r]&#40;/\&#46;/g,&#34;&#46;&#34;&#41;;</span>
+<span id="line729">&#32;&#32;r&#101;t&#117;rn&#32;&#97;;</span>
+<span id="line730">&#125;</span>
+<span id="line731"></span>
+<span id="line732">&#101;xp&#111;rt&#32;d&#101;f&#97;&#117;lt&#32;fwl;</span>
+<span id="line733"></span>
+[/code]

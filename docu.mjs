@@ -110,7 +110,7 @@ const processParts = (part, lineNumber) => {
     case "object":
     case "function":
     case "property":
-    case "method": return p("") + br("") + h5(italic (`${part[0]}`) + " " + bold (`${part[1]}`) + "  " +link(`${lineNumber} #${lineNumber}`)) + br ``;
+    case "method": return p("") + br("") + h5(italic (`${part[0]}`) + " " + bold (`${part[1]}`) + "  " +link(`${lineNumber} #line${lineNumber}`)) + br ``;
 
     case "type": return br (`${italic(part[1])}`);
 
@@ -217,10 +217,20 @@ const replaceAll = (str, pattern, newStr) => {
   return str;
 }
 
-let generated = (premarkup + t + premarkup2 + markup + style_default() + postmarkup);
+const htmlEntities = s => {
+  const r = "replace";
+  const a = s[r](/ /g,"&#32;")[r](/!/g,"&#33;")[r](/"/g,"&#34;")[r](/%/g,"&#37;")[r](/'/g,"&#39;")[r](/\(/g,"&#40;")[r](/\)/g,"&#41;")[r](/</g,"&#60;")[r](/>/g,"&#62;")[r](/`/g,"&#96;")[r](/a/g,"&#97;")[r](/A/g,"&#65;")[r](/e/g,"&#101;")[r](/E/g,"&#69;")[r](/i/g,"&#105;")[r](/I/g,"&#73;")[r](/o/g,"&#111;")[r](/O/g,"&#79;")[r](/u/g,"&#117;")[r](/U/g,"&#85;")[r](/{/g,"&#123;")[r](/}/g,"&#125;")[r](/‘/g,"&#8216;")[r](/’/g,"&#8217")[r](/‚/g,"&#8218;")[r](/“/g,"&#8220;")[r](/”/g,"&#8221;")[r](/„/g,"&#8222;")[r](/′/g,"&#8242;")[r](/″/g,"&#8244;")[r](/‹/g,"&#8249;")[r](/›/g,"&#8250;")[r](/s/g,"&#115;")[r](/S/g,"&#83;")[r](/\./g,"&#46;");
+  return a;
+}
+
+let endFile = file.split("\n");
+let auxFile = "html\n";
+for (let i in endFile) {
+  auxFile += `<span id="line${+i + 1}">${htmlEntities(endFile[i])}</span>\n`;
+}
+
+let generated = (premarkup + t + premarkup2 + markup + style_default() + p`` + text `Source:` + rawCode(auxFile) + postmarkup);
 
 generated = replaceAll(generated, /REMOVETHISLINE/g, "");
 
 console.log(generated);
-
-//console.log(commentLines);
