@@ -10,7 +10,7 @@ Library to create documents in html, markdown and bbcode.
   
   
   
-##### _function_ **fwl**  [24](#line24)  
+##### [24](#24)  
 Bind the library methods to the object  
 Argument: **obj** _Object_   Object to bind the methods to  
 Return: _undefined_   
@@ -26,7 +26,7 @@ text(`This is a template using javascript variables ${new Date()}`)
 ```  
   
   
-##### _property_ **obj.documentType**  [33](#line33)  
+##### [33](#33)  
 Specify what document to make  
 Values: "html","markdown","bbcode"  
 ```javascript
@@ -36,7 +36,7 @@ obj.documentType = "bbcode" // create outputs bbcode instead
 ```  
   
   
-##### _method_ **obj.create**  [58](#line58)  
+##### [58](#58)  
 Print and return the generated code for the chosen document  
 Argument: **(...s)** _String_   String/s to print  
 Return: **str** _String_   All the strings  
@@ -62,7 +62,7 @@ html `</body>
 ```  
   
   
-##### _method_ **obj.html**  [92](#line92)  
+##### [92](#92)  
 Only add the string to generated html if HTML document.  
 Argument: **s** _String_   HTML code to include  
 Return: **s** _String_   Html code  
@@ -87,7 +87,7 @@ html (endingBodyTag)
 ```  
   
   
-##### _method_ **obj.title**  [106](#line106)  
+##### [106](#106)  
 Add title tag to generated html  
 Argument: **s** _String_   Document title  
 Return: **code** _String_   String between title tags (html)  
@@ -96,7 +96,7 @@ title `Documentation`
 ```  
   
   
-##### _method_ **obj.text**  [120](#line120)  
+##### [120](#120)  
 Add text to the document  
 Argument: **s** _String_   Text to add.  
 Return: **s** _String_   Text code  
@@ -105,7 +105,7 @@ text `This text will be shown in generated documents`
 ```  
   
   
-##### _method_ **obj.p**  [134](#line134)  
+##### [134](#134)  
 Add text in a paragraph to the document  
 Argument: **s** _String_   Text to insert  
 Return: **s** _String_   Paragraph code  
@@ -114,7 +114,7 @@ p `My text`
 ```  
   
   
-##### _method_ **obj.br**  [148](#line148)  
+##### [148](#148)  
 Add a linebreak  
 Argument: **s** _String_   Text to prepend the linebreak  
 Return: **s** _String_   Linebreak code  
@@ -123,7 +123,7 @@ br `This text is line break terminated`
 ```  
   
   
-##### _method_ **obj.h1**  [162](#line162)  
+##### [162](#162)  
 Add text as h1  
 Argument: **s** _String_   Heading text  
 Return: **s** _String_   Heading code  
@@ -132,7 +132,7 @@ h1 `Documentation`
 ```  
   
   
-##### _method_ **obj.h2**  [176](#line176)  
+##### [176](#176)  
 Add text as h2  
 Argument: **s** _String_   Heading text  
 Return: **s** _String_   Heading code  
@@ -141,7 +141,7 @@ h2 `Articles`
 ```  
   
   
-##### _method_ **obj.h3**  [190](#line190)  
+##### [190](#190)  
 Add text as h1  
 Argument: **s** _String_   Heading text  
 Return: **s** _String_   Heading code  
@@ -150,7 +150,7 @@ h3 `Article Title`
 ```  
   
   
-##### _method_ **obj.h4**  [204](#line204)  
+##### [204](#204)  
 Add text as h1  
 Argument: **s** _String_   Heading text  
 Return: **s** _String_   Heading code  
@@ -159,7 +159,7 @@ h4 `Article Content Title`
 ```  
   
   
-##### _method_ **obj.h5**  [218](#line218)  
+##### [218](#218)  
 Add text as h1  
 Argument: **s** _String_   Heading text  
 Return: **s** _String_   Heading code  
@@ -168,7 +168,7 @@ h5 `Part of the article`
 ```  
   
   
-##### _method_ **obj.h6**  [232](#line232)  
+##### [232](#232)  
 Add text as h1  
 Argument: **s** _String_   Heading text  
 Return: **s** _String_   Heading code  
@@ -177,7 +177,7 @@ h6 `Small title`
 ```  
   
   
-##### _method_ **obj.link**  [246](#line246)  
+##### [246](#246)  
 Create a clickable link  
 Argument: **s** _String_   Link text + space + url  
 Return: **s** _String_   Clickable link code  
@@ -186,7 +186,7 @@ link `StringManolo Github Account Link https://github.com/StringManolo`
 ```  
   
   
-##### _method_ **obj.image**  [271](#line271)  
+##### [271](#271)  
 Create a image  
 Argument: **s** _String_   Alt text + space + url  
 Return: **s** _String_   Image code  
@@ -195,7 +195,7 @@ image `google favicon https://google.com/favicon.ico`
 ```  
   
   
-##### _method_ **obj.code**  [298](#line298)  
+##### [298](#298)  
 Create a highlighted code block  
 Argument: **s** _String_   Code. First line is only the language name  
 Return: **s** _String_   Code block.  
@@ -209,7 +209,7 @@ int main() {
 ```  
   
   
-##### _method_ **obj.code**  [334](#line334)  
+##### [334](#334)  
 Create a highlighted code block  
 Argument: **s** _String_   Code. First line is only the language name  
 Return: **s** _String_   Code block.  
@@ -223,7 +223,7 @@ int main() {
 ```  
   
   
-##### _method_ **obj.bold**  [365](#line365)  
+##### [365](#365)  
 Make text bold  
 Argument: **s** _String_   Text  
 Return: **s** _String_   Bold text  
@@ -232,7 +232,7 @@ bold `important`;
 ```  
   
   
-##### _method_ **obj.italic**  [379](#line379)  
+##### [379](#379)  
 Make text italic  
 Argument: **s** _String_   Text  
 Return: **s** _String_   Italized text  
@@ -241,7 +241,7 @@ italic `cool`
 ```  
   
   
-##### _method_ **obj.underline**  [393](#line393)  
+##### [393](#393)  
 Underline the text  
 Argument: **s** _String_   Text  
 Return: **s** _String_   Underlined text (markdown returns normal text)  
@@ -250,7 +250,7 @@ underline `underlined text`
 ```  
   
   
-##### _method_ **obj.list**  [407](#line407)  
+##### [407](#407)  
 Create a dotted list of items  
 Argument: **s** _String_   Comma separated list of items  
 Return: **s** _String_   List code  
@@ -259,7 +259,7 @@ list `car,bike,plane,truck,bus`
 ```  
   
   
-##### _method_ **obj.olist**  [452](#line452)  
+##### [452](#452)  
 Create a numeric list of items  
 Argument: **s** _String_   Comma separated list of items  
 Return: **s** _String_   List code  
@@ -268,7 +268,7 @@ olist `Press the button,Wait 5 seconds,Press the button again,done`
 ```  
   
   
-##### _method_ **obj.hr**  [497](#line497)  
+##### [497](#497)  
 Add a horizontal line separator  
 Argument: **()**  
 Return: **s** _String_   Horizontal separator code  
@@ -277,7 +277,7 @@ hr ``
 ```  
   
   
-##### _method_ **obj.quote**  [511](#line511)  
+##### [511](#511)  
 Create a quoted block  
 Argument: **s** _String_   Text block  
 Return: **s** _String_   Quoted block  
@@ -286,7 +286,7 @@ quote `"This text is being quoted"`
 ```  
   
   
-##### _method_ **obj.table**  [536](#line536)  
+##### [536](#536)  
 Create a table  
 Argument: **s** _String_   | separated list  
 Return: **s** _String_   Table code  
@@ -297,7 +297,7 @@ shoes | 3€`
 ```  
   
   
-##### _method_ **obj.style_tables**  [612](#line612)  
+##### [612](#612)  
 Add tables css if generating a html document  
 Argument: **()**  
 Return: **s** _String_   CSS style code  
@@ -306,7 +306,7 @@ style_tables ``
 ```  
   
   
-##### _method_ **obj.style_default**  [646](#line646)  
+##### [646](#646)  
 Add document css if generating a html document  
 Argument: **()**  
 Return: **s** _String_   CSS style code  
@@ -315,7 +315,7 @@ style_default``
 ```  
   
   
-##### _function_ **replaceAll**  [712](#line712)  
+##### [712](#712)  
 Replace all ocurrences of a string from the text  
 Argument: **str** _String_   Text to replace findings from  
 Argument: **pattern** _String_   Text (coverted to regular expression) to replace  
@@ -326,7 +326,7 @@ replaceAll("hello Manolo, hello", "hello", "bye");
 ```  
   
   
-##### _function_ **htmlEntities**  [726](#line726)  
+##### [726](#726)  
 Convert all characters to HTML entities to avoid text being interpretated as code  
 Argument: **s** _String_   Code to covert to HTML entities  
 Return: **a** _String_   HTML entities  

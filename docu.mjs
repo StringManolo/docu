@@ -8,6 +8,7 @@
 * description -> Docu is a code geneator CLI tool. Is intended to generate documentation in html, markdown and bbcode from code commentaries.
 * summary -> CLI tool to create documents from commentaries in html, markdown and bbcode.
 * dependency -> node https://node.org,fwl.mjs https://github.com/StringManolo/fwl
+* htmlDocumentationLink -> https://github.com/StringManolo/docu/blob/master/generated/fwl_docu.html
 */
 
 import fs from "fs";
@@ -83,6 +84,7 @@ for (let i in file) {
 
 
 let lang = "unknown";
+let htmlDocLink = "";
 const processParts = (part, lineNumber) => {
   let aux = "";
   switch(part[0]) {
@@ -93,6 +95,11 @@ const processParts = (part, lineNumber) => {
     case "title": 
       t = title (`${part[1]}`);
     break;
+
+    case "htmlDocumentationLink":
+      htmlDocLink = part[1];
+    break;
+       
 
     case "name": return h1 (`${part[1]}`) + hr ``;
     case "filetype": return h3 (`${part[1]}`) + hr ``;
@@ -110,7 +117,7 @@ const processParts = (part, lineNumber) => {
     case "object":
     case "function":
     case "property":
-    case "method": return p("") + br("") + h5(italic (`${part[0]}`) + " " + bold (`${part[1]}`) + "  " +link(`${lineNumber} #line${lineNumber}`)) + br ``;
+    case "method": return p("") + br("") + h5(italic (`${part[0]}`) + " " + bold (`${part[1]}`) + "  " + documentType == "html" ? link(`${lineNumber} #line${lineNumber}`) : link(`${lineNumber} ${htmlDocLink}#${lineNumber}`)) + br ``;
 
     case "type": return br (`${italic(part[1])}`);
 
